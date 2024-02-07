@@ -31,7 +31,7 @@ public class CandleHolderBlockMixin {
             ParticleOptions particle = ParticleTypes.SMALL_FLAME;
             if (ModList.get().isLoaded(WOWConstants.BUZZIER_BEES)) {
                 // This feels... less than ideal
-                if (state.getBlock().getDescriptionId().equals("block.supplementaries.candle_holder_soul")) {
+                if (state.getBlock().getDescriptionId().equals("block.supplementaries.candle_holder_soul") || state.getBlock().getDescriptionId().equals("block.supplementaries.candle_holder_soul_wall")) {
                     particle = BBParticleTypes.SMALL_SOUL_FIRE_FLAME.get();
                 }
             }

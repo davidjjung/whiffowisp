@@ -49,11 +49,14 @@ public class WOWBlockStatements {
             for (String color : colors) {
                 StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "candle_holder_" + color).get(), TRIMMED, false);
             }
+            StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle").get(), TRIMMED, false);
+            StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_wall").get(), TRIMMED, false);
             if (ModList.get().isLoaded(WOWConstants.BUZZIER_BEES)) {
                 // The reason this class is called during the common setup method is because these are run *after* forge has finished registering blocks
                 StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "candle_holder_soul").get(), TRIMMED, false);
+                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_soul").get(), TRIMMED, false);
+                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_soul_wall").get(), TRIMMED, false);
             }
-            StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle").get(), TRIMMED, false);
         }
     }
 
