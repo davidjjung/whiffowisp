@@ -26,7 +26,11 @@ public class ArtsAndCraftsCandleBlock extends ScentedCandleBlock{
                 if (sheep.tickCount % 300 == 0) {
                     DyeColor color = this.getRandomColor();
                     while (color == sheep.getColor()) {
-                        color = this.getRandomColor();
+                        if (color != sheep.getColor()) {
+                            break;
+                        } else {
+                            color = this.getRandomColor();
+                        }
                     }
                     sheep.setColor(color);
                     RandomSource random = sheep.getRandom();

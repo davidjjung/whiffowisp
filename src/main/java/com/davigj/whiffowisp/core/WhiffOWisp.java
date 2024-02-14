@@ -2,6 +2,9 @@ package com.davigj.whiffowisp.core;
 
 import com.davigj.whiffowisp.core.data.client.WOWBlockStateProvider;
 import com.davigj.whiffowisp.core.data.server.WOWBlockTagsProvider;
+import com.davigj.whiffowisp.core.data.server.WOWLootTableProvider;
+import com.davigj.whiffowisp.core.other.WOWEvents;
+import com.davigj.whiffowisp.core.registry.WOWParticleTypes;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,7 +19,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import static com.davigj.whiffowisp.core.other.WOWBlockStatements.addTrimStates;
-import static com.davigj.whiffowisp.core.other.WOWEvents.initializeCandleMap;
 
 @Mod(WhiffOWisp.MOD_ID)
 public class WhiffOWisp {
@@ -29,6 +31,7 @@ public class WhiffOWisp {
         MinecraftForge.EVENT_BUS.register(this);
 
 		REGISTRY_HELPER.register(bus);
+        WOWParticleTypes.PARTICLE_TYPES.register(bus);
 
         bus.addListener(this::commonSetup);
         bus.addListener(this::clientSetup);
@@ -38,14 +41,12 @@ public class WhiffOWisp {
 
     private void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            initializeCandleMap();
             addTrimStates();
         });
     }
 
     private void clientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-
         });
     }
 
@@ -56,7 +57,7 @@ public class WhiffOWisp {
         boolean includeServer = event.includeServer();
         WOWBlockTagsProvider blockTags = new WOWBlockTagsProvider(generator, helper);
         generator.addProvider(includeServer, blockTags);
-//        generator.addProvider(includeServer, new WOWLootTableProvider(generator));
+        generator.addProvider(includeServer, new WOWLootTableProvider(generator));
 
         boolean includeClient = event.includeClient();
         generator.addProvider(includeClient, new WOWBlockStateProvider(generator, helper));

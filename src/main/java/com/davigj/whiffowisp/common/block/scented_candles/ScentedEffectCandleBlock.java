@@ -24,12 +24,18 @@ public class ScentedEffectCandleBlock extends ScentedCandleBlock{
         this.effect = effect;
         this.amplifier = amplifier;
     }
+    public ScentedEffectCandleBlock(Properties properties, String modid, ResourceLocation effect) {
+        super(properties);
+        this.modid = modid;
+        this.effect = effect;
+        this.amplifier = 0;
+    }
 
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
         if (!level.isClientSide) {
             if (ModList.get().isLoaded(modid) && entity instanceof LivingEntity living) {
                 living.addEffect(new MobEffectInstance(new MobEffectInstance(
-                        getCompatEffect(modid, effect).get(), 20 * state.getValue(CANDLES), amplifier)));
+                        getCompatEffect(modid, effect).get(), 10 + (20 * state.getValue(CANDLES)), amplifier)));
             }
         }
     }

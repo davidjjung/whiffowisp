@@ -81,6 +81,8 @@ dependencies {
     compileOnly fg.deobf("maven.modrinth:b7vOFSIp:d9WQBnra")
     implementation fg.deobf("maven.modrinth:a9AsUNGn:fim7a2ol") // Statement
     runtimeOnly fg.deobf("maven.modrinth:b7vOFSIp:d9WQBnra") // Buzzier Bees
+    runtimeOnly fg.deobf("maven.modrinth:neapolitan:8qmVV9M7") // Neapolitan
+    runtimeOnly fg.deobf("maven.modrinth:vt0VyseM:3NNRjDeC") // Architect's Palette
     implementation fg.deobf("maven.modrinth:moonlight:1.19.2-2.3.4-forge")
     implementation fg.deobf("maven.modrinth:supplementaries:1.19.2-2.4.5-forge")
 

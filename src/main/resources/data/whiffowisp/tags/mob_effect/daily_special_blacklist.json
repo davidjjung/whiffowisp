@@ -1,0 +1,15 @@
+{
+  "values": [
+    "minecraft:hero_of_the_village",
+    "minecraft:hero_of_the_village",
+    "minecraft:health_boost",
+    "minecraft:instant_health",
+    "minecraft:instant_damage",
+    "minecraft:saturation",
+    "minecraft:bad_omen",
+    {
+      "id": "neapolitan:vanilla_scent",
+      "required": false
+    }
+  ]
+}

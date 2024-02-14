@@ -2,6 +2,7 @@ package com.davigj.whiffowisp.core.mixin;
 
 import com.davigj.whiffowisp.core.other.WOWBlockStatements;
 import com.davigj.whiffowisp.core.other.WOWConstants;
+import com.teamabnormals.buzzier_bees.core.registry.BBParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
@@ -32,7 +33,7 @@ public class AbstractCandleSkullBlockMixin {
                 if (f < 0.17F) {
                     level.playLocalSound(vec3.x + 0.5, vec3.y + 0.5, vec3.z + 0.5, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + randomSource.nextFloat(), randomSource.nextFloat() * 0.7F + 0.3F, false);
                 }
-                level.addParticle((ParticleOptions) ParticleTypes.SMALL_FLAME, vec3.x, vec3.y, vec3.z, 0.0, 0.0, 0.0);
+                level.addParticle((ParticleOptions) particle, vec3.x, vec3.y, vec3.z, 0.0, 0.0, 0.0);
                 ci.cancel();
             }
         }

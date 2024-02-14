@@ -10,8 +10,9 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 
+import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
+
 public class ScentedCandleBlock extends CandleBlock {
-    public static final BooleanProperty TRIMMED = BooleanProperty.create("trimmed");
 
     public ScentedCandleBlock(Properties p_152801_) {
         super(p_152801_);

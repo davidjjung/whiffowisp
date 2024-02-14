@@ -32,8 +32,7 @@ public class WOWBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-//        this.trimmedCandleBlock((CandleBlock) WOWBlocks.TRIMMED_CANDLE.get(), new ResourceLocation("minecraft:block/candle"),
-//        new ResourceLocation("minecraft:block/candle_lit"));
+//        this.trimmedCandleBlock((CandleBlock) WOWBlocks.TRIMMED_CANDLE.get(), new ResourceLocation("minecraft:block/candle"), new ResourceLocation("minecraft:block/candle_lit"));
     }
 
     private void trimmedCandleBlock(CandleBlock block, ResourceLocation candle, ResourceLocation litCandle) {
