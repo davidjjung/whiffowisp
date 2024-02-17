@@ -23,7 +23,6 @@ import static com.davigj.whiffowisp.core.other.WOWConstants.initializeDailySpeci
 
 @Mod.EventBusSubscriber(modid = WhiffOWisp.MOD_ID)
 public class WOWEvents {
-
     @SubscribeEvent
     public static void trimWick(PlayerInteractEvent.RightClickBlock event) {
         Player player = event.getEntity();
@@ -47,7 +46,6 @@ public class WOWEvents {
 
     @SubscribeEvent
     public static void afterTagsLoaded(TagsUpdatedEvent event) {
-        System.out.println("Tags are updating!");
         initializeDailySpecials();
     }
 }

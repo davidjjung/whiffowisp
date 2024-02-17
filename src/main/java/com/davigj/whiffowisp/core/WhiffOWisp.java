@@ -1,8 +1,10 @@
 package com.davigj.whiffowisp.core;
 
 import com.davigj.whiffowisp.core.data.client.WOWBlockStateProvider;
+import com.davigj.whiffowisp.core.data.client.WOWItemModelProvider;
 import com.davigj.whiffowisp.core.data.server.WOWBlockTagsProvider;
 import com.davigj.whiffowisp.core.data.server.WOWLootTableProvider;
+import com.davigj.whiffowisp.core.data.server.WOWRecipeProvider;
 import com.davigj.whiffowisp.core.other.WOWEvents;
 import com.davigj.whiffowisp.core.registry.WOWParticleTypes;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
@@ -58,8 +60,10 @@ public class WhiffOWisp {
         WOWBlockTagsProvider blockTags = new WOWBlockTagsProvider(generator, helper);
         generator.addProvider(includeServer, blockTags);
         generator.addProvider(includeServer, new WOWLootTableProvider(generator));
+        generator.addProvider(includeServer, new WOWRecipeProvider(generator));
 
         boolean includeClient = event.includeClient();
+        generator.addProvider(includeClient, new WOWItemModelProvider(generator, helper));
         generator.addProvider(includeClient, new WOWBlockStateProvider(generator, helper));
     }
 }
