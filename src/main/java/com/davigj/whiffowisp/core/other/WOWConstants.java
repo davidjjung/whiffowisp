@@ -3,6 +3,7 @@ package com.davigj.whiffowisp.core.other;
 import com.davigj.whiffowisp.core.WhiffOWisp;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.tags.ITag;
 import net.minecraftforge.registries.tags.ITagManager;
@@ -15,6 +16,9 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class WOWConstants {
+    public static final BooleanProperty TRIMMED = BooleanProperty.create("trimmed");
+    public static final BooleanProperty BOTTLED = BooleanProperty.create("bottled");
+
     public static final String MINECRAFT = "minecraft";
     public static final ResourceLocation ABSORPTION = new ResourceLocation(MINECRAFT, "absorption");
     public static final ResourceLocation WEAKNESS = new ResourceLocation(MINECRAFT, "weakness");

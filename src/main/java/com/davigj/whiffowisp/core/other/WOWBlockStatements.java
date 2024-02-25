@@ -12,11 +12,10 @@ import virtuoel.statement.api.StateRefresher;
 
 import java.util.function.Supplier;
 
+import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
 import static com.davigj.whiffowisp.core.other.WOWConstants.colors;
 
 public class WOWBlockStatements {
-    public static final BooleanProperty TRIMMED = BooleanProperty.create("trimmed");
-
     // This utility class adds all the "trimmed" blockstate properties to existing blocks. Thanks, Statement!
 
     public static void addTrimStates() {
@@ -52,7 +51,6 @@ public class WOWBlockStatements {
             StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle").get(), TRIMMED, false);
             StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_wall").get(), TRIMMED, false);
             if (ModList.get().isLoaded(WOWConstants.BUZZIER_BEES)) {
-                // The reason this class is called during the common setup method is because these are run *after* forge has finished registering blocks
                 StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "candle_holder_soul").get(), TRIMMED, false);
                 StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_soul").get(), TRIMMED, false);
                 StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_soul_wall").get(), TRIMMED, false);
