@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "candles=1": {
+      "model": "whiffowisp:block/homesick_scented_candle_small"
+    },
+    "candles=2": {
+      "model": "whiffowisp:block/homesick_scented_candle_medium"
+    },
+    "candles=3": {
+      "model": "whiffowisp:block/homesick_scented_candle_big"
+    },
+    "candles=4": {
+      "model": "whiffowisp:block/homesick_scented_candle_large"
+    }
+  }
+}

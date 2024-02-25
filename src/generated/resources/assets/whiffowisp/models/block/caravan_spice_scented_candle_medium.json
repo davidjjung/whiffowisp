@@ -1,0 +1,7 @@
+{
+  "parent": "whiffowisp:block/medium_scented_candle",
+  "textures": {
+    "all": "whiffowisp:block/caravan_spice_scented_candle_medium",
+    "particle": "whiffowisp:block/caravan_spice_scented_candle_medium"
+  }
+}

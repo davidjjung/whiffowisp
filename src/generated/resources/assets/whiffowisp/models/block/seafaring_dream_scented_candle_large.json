@@ -1,0 +1,7 @@
+{
+  "parent": "whiffowisp:block/large_scented_candle",
+  "textures": {
+    "all": "whiffowisp:block/seafaring_dream_scented_candle_large",
+    "particle": "whiffowisp:block/seafaring_dream_scented_candle_large"
+  }
+}
