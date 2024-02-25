@@ -44,15 +44,15 @@ public class PinkSandsCandleBlock extends ScentedCandleBlock{
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (state.getValue(LIT)) {
             this.getParticleOffsets(state).forEach((p_220695_) -> {
-                addParticlesAndSound(level, p_220695_.add((double)pos.getX(), (double)pos.getY(), (double)pos.getZ()), random, state.getValue(WATERLOGGED));
+                addParticlesAndSound(level, p_220695_.add((double)pos.getX(), (double)pos.getY(), (double)pos.getZ()), random, state);
             });
         }
     }
 
-    private static void addParticlesAndSound(Level p_220688_, Vec3 p_220689_, RandomSource p_220690_, boolean waterlogged) {
+    private static void addParticlesAndSound(Level p_220688_, Vec3 p_220689_, RandomSource p_220690_, BlockState state) {
         float f = p_220690_.nextFloat();
         ParticleOptions particle;
-        if (waterlogged) {
+        if (state.getValue(WATERLOGGED)) {
             particle = ParticleTypes.BUBBLE_COLUMN_UP;
         } else {
             particle = ParticleTypes.SMALL_FLAME;

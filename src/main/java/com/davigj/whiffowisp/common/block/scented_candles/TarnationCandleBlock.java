@@ -37,16 +37,16 @@ public class TarnationCandleBlock extends ScentedCandleBlock{
         }
     }
 
-    private static void addParticlesAndSound(Level p_220688_, Vec3 p_220689_, RandomSource p_220690_) {
-        float f = p_220690_.nextFloat();
+    private static void addParticlesAndSound(Level level, Vec3 vec3, RandomSource random) {
+        float f = random.nextFloat();
         if (f < 0.3F) {
-            p_220688_.addParticle(ParticleTypes.SMOKE, p_220689_.x, p_220689_.y, p_220689_.z, 0.0D, 0.0D, 0.0D);
+            level.addParticle(ParticleTypes.SMOKE, vec3.x, vec3.y, vec3.z, 0.0D, 0.0D, 0.0D);
             if (f < 0.17F) {
-                p_220688_.playLocalSound(p_220689_.x + 0.5D, p_220689_.y + 0.5D, p_220689_.z + 0.5D, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + p_220690_.nextFloat(), p_220690_.nextFloat() * 0.7F + 0.3F, false);
+                level.playLocalSound(vec3.x + 0.5D, vec3.y + 0.5D, vec3.z + 0.5D, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + random.nextFloat(), random.nextFloat() * 0.7F + 0.3F, false);
             }
         }
         if (ModList.get().isLoaded(WOWConstants.ARCHITECTS_PALETTE)) {
-            p_220688_.addParticle(WOWParticleTypes.SMALL_NETHER_BRASS_FLAME.get(), p_220689_.x, p_220689_.y, p_220689_.z, 0.0D, 0.0D, 0.0D);
+            level.addParticle(WOWParticleTypes.SMALL_NETHER_BRASS_FLAME.get(), vec3.x, vec3.y, vec3.z, 0.0D, 0.0D, 0.0D);
         }
     }
 }

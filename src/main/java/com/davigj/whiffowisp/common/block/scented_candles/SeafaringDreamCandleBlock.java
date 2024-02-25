@@ -30,6 +30,8 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
+
 @Mod.EventBusSubscriber(modid = WhiffOWisp.MOD_ID)
 public class SeafaringDreamCandleBlock extends ScentedCandleBlock {
     public SeafaringDreamCandleBlock(Properties p_152801_) {
@@ -47,21 +49,23 @@ public class SeafaringDreamCandleBlock extends ScentedCandleBlock {
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (state.getValue(LIT)) {
             this.getParticleOffsets(state).forEach((p_220695_) -> {
-                addParticlesAndSound(level, p_220695_.add((double)pos.getX(), (double)pos.getY(), (double)pos.getZ()), random, state.getValue(WATERLOGGED));
+                addParticlesAndSound(level, p_220695_.add((double)pos.getX(), (double)pos.getY(), (double)pos.getZ()), random, state);
             });
         }
     }
 
-    private static void addParticlesAndSound(Level p_220688_, Vec3 p_220689_, RandomSource p_220690_, boolean waterlogged) {
+    private static void addParticlesAndSound(Level p_220688_, Vec3 p_220689_, RandomSource p_220690_, BlockState state) {
         float f = p_220690_.nextFloat();
         ParticleOptions particle;
-        if (waterlogged) {
+        if (state.getValue(WATERLOGGED)) {
             particle = ParticleTypes.BUBBLE;
         } else {
             particle = ParticleTypes.SMALL_FLAME;
         }
         if (f < 0.3F) {
-            p_220688_.addParticle(ParticleTypes.SMOKE, p_220689_.x, p_220689_.y, p_220689_.z, 0.0D, 0.0D, 0.0D);
+            if (!state.getValue(TRIMMED)) {
+                p_220688_.addParticle(ParticleTypes.SMOKE, p_220689_.x, p_220689_.y, p_220689_.z, 0.0D, 0.0D, 0.0D);
+            }
             if (f < 0.17F) {
                 p_220688_.playLocalSound(p_220689_.x + 0.5D, p_220689_.y + 0.5D, p_220689_.z + 0.5D, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + p_220690_.nextFloat(), p_220690_.nextFloat() * 0.7F + 0.3F, false);
             }

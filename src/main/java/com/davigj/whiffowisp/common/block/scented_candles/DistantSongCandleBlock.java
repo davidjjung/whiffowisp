@@ -24,6 +24,7 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
 
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof LivingEntity living) {
+            if (entity instanceof Player player && player.isCrouching()) { return; }
             switch (state.getValue(CANDLES)) {
                 case 1 -> teleport(living, level, 0, -6);
                 case 2 -> teleport(living, level, -6, 0);
@@ -41,7 +42,7 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
             double y = targetPos.getY();
             double z = targetPos.getZ() + 0.5;
             int i = 0;
-            while (!level.getBlockState(new BlockPos(x, y, z)).isAir() && i < 4) {
+            while (!level.getBlockState(new BlockPos(x, y, z)).isAir() && i < 5) {
                 i++;
                 y++;
             }
