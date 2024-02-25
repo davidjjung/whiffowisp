@@ -1,1 +1,6 @@
-// 1.19.2	2024-02-07T06:34:06.868325	Block States: whiffowisp
+// 1.19.2	2024-02-24T19:21:44.1916927	Block States: whiffowisp
+5dbfd7be182be27e0b33100f7ce7cc78eccbc487 assets/whiffowisp/blockstates/distant_song_scented_candle.json
+eac32e944f6e1094fb5021416c355dc374e9c224 assets/whiffowisp/models/block/distant_song_scented_candle_big.json
+12843cba1312aa5d592005a3f9effb9a00d6f520 assets/whiffowisp/models/block/distant_song_scented_candle_large.json
+68a61dc0d389d353680e6972b3be00deb79c817d assets/whiffowisp/models/block/distant_song_scented_candle_medium.json
+40d00e7ba97953fb0099d49f4537011794f19520 assets/whiffowisp/models/block/distant_song_scented_candle_small.json

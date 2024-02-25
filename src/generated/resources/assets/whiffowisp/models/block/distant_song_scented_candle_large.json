@@ -1,0 +1,7 @@
+{
+  "parent": "whiffowisp:block/large_scented_candle",
+  "textures": {
+    "all": "whiffowisp:block/distant_song_scented_candle_large",
+    "particle": "whiffowisp:block/distant_song_scented_candle_large"
+  }
+}
