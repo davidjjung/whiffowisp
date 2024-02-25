@@ -16,6 +16,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.ModList;
 
+import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
+
 public class TarnationCandleBlock extends ScentedCandleBlock{
     public TarnationCandleBlock(Properties p_152801_) {
         super(p_152801_);
@@ -32,15 +34,17 @@ public class TarnationCandleBlock extends ScentedCandleBlock{
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (state.getValue(LIT)) {
             this.getParticleOffsets(state).forEach((p_220695_) -> {
-                addParticlesAndSound(level, p_220695_.add((double)pos.getX(), (double)pos.getY(), (double)pos.getZ()), random);
+                addParticlesAndSound(level, p_220695_.add((double)pos.getX(), (double)pos.getY(), (double)pos.getZ()), random, state);
             });
         }
     }
 
-    private static void addParticlesAndSound(Level level, Vec3 vec3, RandomSource random) {
+    private static void addParticlesAndSound(Level level, Vec3 vec3, RandomSource random, BlockState state) {
         float f = random.nextFloat();
         if (f < 0.3F) {
-            level.addParticle(ParticleTypes.SMOKE, vec3.x, vec3.y, vec3.z, 0.0D, 0.0D, 0.0D);
+            if (!state.getValue(TRIMMED)) {
+                level.addParticle(ParticleTypes.SMOKE, vec3.x, vec3.y, vec3.z, 0.0D, 0.0D, 0.0D);
+            }
             if (f < 0.17F) {
                 level.playLocalSound(vec3.x + 0.5D, vec3.y + 0.5D, vec3.z + 0.5D, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + random.nextFloat(), random.nextFloat() * 0.7F + 0.3F, false);
             }
