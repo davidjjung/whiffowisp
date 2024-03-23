@@ -63,7 +63,7 @@ public class WOWLootTableProvider extends LootTableProvider {
             this.add(WOWBlocks.ARTS_AND_CRAFTS_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
             this.add(WOWBlocks.HOMESICK_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
             this.add(WOWBlocks.DISTANT_SONG_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
-
+            /*
             this.add(WOWBlocks.SOFT_BLANKET_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
             this.add(WOWBlocks.VANILLA_BUNNY_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
             this.add(WOWBlocks.FOREST_HAZE_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
@@ -72,6 +72,7 @@ public class WOWLootTableProvider extends LootTableProvider {
             this.add(WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
             this.add(WOWBlocks.TARNATION_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
             this.add(WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
+            */
         }
 
 

@@ -1,6 +1,7 @@
 package com.davigj.whiffowisp.core.data.client;
 
 import com.davigj.whiffowisp.core.WhiffOWisp;
+import com.davigj.whiffowisp.core.registry.WOWBlocks;
 import com.davigj.whiffowisp.core.registry.WOWItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -18,6 +19,13 @@ public class WOWItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         this.generatedItem((ItemLike) WOWItems.NETHERWAX.get());
+        this.generatedItem((ItemLike) WOWBlocks.ARTS_AND_CRAFTS_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.CARAVAN_SPICE_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.DISTANT_SONG_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.HOMESICK_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.FIRESIDE_SPAT_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.RED_REDEMPTION_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.SEAFARING_DREAM_SCENTED_CANDLE.get());
     }
 
     private void generatedItem(ItemLike item) {

@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[32,)"
-issueTrackerURL = ""
+issueTrackerURL = "https://github.com/davidjjung/whiffowisp/issues"
 license = "MIT License"
 
 [[mods]]
@@ -10,8 +10,8 @@ logoFile = "logo.png"
 itemIcon = "minecraft:candle"
 configBackground = "minecraft:textures/block/dirt.png"
 authors = "DavigJ"
-credits = "DavigJ"
-displayURL = ""
+credits = "Art credits go to Tutta, SuperMightByte, and Ghost"
+displayURL = "https://modrinth.com/mod/whiffowisp"
 displayName = "Whiff O' Wisp"
 description = '''
     Adds scented candles, as well as the ability to trim normal candles such that they do not produce smoke particles.

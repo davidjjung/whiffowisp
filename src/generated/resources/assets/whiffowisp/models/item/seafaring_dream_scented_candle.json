@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "whiffowisp:item/seafaring_dream_scented_candle"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "whiffowisp:item/caravan_spice_scented_candle"
+  }
+}

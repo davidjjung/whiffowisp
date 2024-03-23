@@ -1,5 +1,7 @@
 package com.davigj.whiffowisp.common.block.scented_candles;
 
+import com.davigj.whiffowisp.common.block.entity.ScentedCandleBlockEntity;
+import com.davigj.whiffowisp.core.registry.WOWBlockEntityTypes;
 import com.google.common.collect.ImmutableList;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMaps;
@@ -11,6 +13,10 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CandleBlock;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.Property;
@@ -18,13 +24,13 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static com.davigj.whiffowisp.core.other.WOWConstants.BOTTLED;
 import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
 
-public class ScentedCandleBlock extends CandleBlock {
+public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
     private static final Int2ObjectMap<List<Vec3>> PARTICLE_OFFSETS = Util.make(() -> {
         Int2ObjectMap<List<Vec3>> int2objectmap = new Int2ObjectOpenHashMap<>();
         int2objectmap.defaultReturnValue(ImmutableList.of());
@@ -46,8 +52,7 @@ public class ScentedCandleBlock extends CandleBlock {
                 .setValue(TRIMMED, Boolean.valueOf(false))
                 .setValue(CANDLES, Integer.valueOf(1))
                 .setValue(LIT, Boolean.valueOf(false))
-                .setValue(WATERLOGGED, Boolean.valueOf(false))
-                .setValue(BOTTLED, Boolean.valueOf(false)));
+                .setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
@@ -60,7 +65,7 @@ public class ScentedCandleBlock extends CandleBlock {
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {    }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{TRIMMED, LIT, CANDLES, WATERLOGGED, BOTTLED});
+        builder.add(new Property[]{TRIMMED, LIT, CANDLES, WATERLOGGED});
     }
 
     public VoxelShape getShape(BlockState state, @NotNull BlockGetter block, @NotNull BlockPos pos, @NotNull CollisionContext collision) {
@@ -74,5 +79,20 @@ public class ScentedCandleBlock extends CandleBlock {
 
     protected Iterable<Vec3> getParticleOffsets(BlockState state) {
         return PARTICLE_OFFSETS.get(state.getValue(CANDLES).intValue());
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
+        return new ScentedCandleBlockEntity(blockPos, blockState);
+    }
+
+    @Nullable
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> blockEntity) {
+        return createTickerHelper(blockEntity, (BlockEntityType) WOWBlockEntityTypes.SCENTED_CANDLE.get(), ScentedCandleBlockEntity::tick);    }
+
+    @javax.annotation.Nullable
+    protected static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> createTickerHelper(BlockEntityType<A> entityType, BlockEntityType<E> otherEntity, BlockEntityTicker<? super E> ticker) {
+        return otherEntity == entityType ? (BlockEntityTicker<A>) ticker : null;
     }
 }

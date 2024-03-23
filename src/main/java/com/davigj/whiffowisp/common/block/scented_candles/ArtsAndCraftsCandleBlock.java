@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Random;
 
-public class ArtsAndCraftsCandleBlock extends ScentedCandleBlock{
+public class ArtsAndCraftsCandleBlock extends ScentedCandleBlock {
     public ArtsAndCraftsCandleBlock(Properties p_152801_) {
         super(p_152801_);
     }

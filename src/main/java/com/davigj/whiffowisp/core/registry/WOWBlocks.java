@@ -23,6 +23,7 @@ public class WOWBlocks {
     public static final RegistryObject<Block> HOMESICK_SCENTED_CANDLE = HELPER.createBlock("homesick_scented_candle", () -> new HomesickCandleBlock(Block.Properties.copy(Blocks.LIGHT_GRAY_CANDLE)), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> DISTANT_SONG_SCENTED_CANDLE = HELPER.createBlock("distant_song_scented_candle", () -> new DistantSongCandleBlock(Block.Properties.copy(Blocks.MAGENTA_CANDLE)), CreativeModeTab.TAB_DECORATIONS);
 
+    /*
     public static final RegistryObject<Block> SOFT_BLANKET_SCENTED_CANDLE = HELPER.createBlock("soft_blanket_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.WHITE_CANDLE), WOWConstants.MINECRAFT, WOWConstants.WEAKNESS), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> VANILLA_BUNNY_SCENTED_CANDLE = HELPER.createBlock("vanilla_bunny_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.LIGHT_BLUE_CANDLE), WOWConstants.MINECRAFT, WOWConstants.JUMP_BOOST, 1), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> FOREST_HAZE_SCENTED_CANDLE = HELPER.createBlock("forest_haze_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.GREEN_CANDLE), WOWConstants.MINECRAFT, WOWConstants.SLOWNESS), CreativeModeTab.TAB_DECORATIONS);
@@ -33,5 +34,5 @@ public class WOWBlocks {
     public static final RegistryObject<Block> TARNATION_SCENTED_CANDLE = HELPER.createBlock("tarnation_scented_candle", () -> new TarnationCandleBlock(Block.Properties.copy(Blocks.BROWN_CANDLE)), CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> DAILY_SPECIAL_SCENTED_CANDLE = HELPER.createBlock("daily_special_scented_candle", () -> new DailySpecialCandleBlock(Block.Properties.copy(Blocks.PURPLE_CANDLE)), CreativeModeTab.TAB_DECORATIONS);
-
+     */
 }
