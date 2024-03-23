@@ -8,14 +8,14 @@
       "item": "whiffowisp:netherwax"
     },
     {
-      "item": "minecraft:popped_chorus_fruit"
+      "item": "minecraft:lily_of_the_valley"
     },
     {
-      "item": "minecraft:popped_chorus_fruit"
+      "item": "minecraft:ghast_tear"
     }
   ],
   "result": {
-    "item": "whiffowisp:distant_song_scented_candle",
+    "item": "whiffowisp:homesick_scented_candle",
     "count": 2
   }
 }

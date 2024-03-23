@@ -8,14 +8,14 @@
       "item": "whiffowisp:netherwax"
     },
     {
-      "item": "minecraft:popped_chorus_fruit"
+      "item": "minecraft:dried_kelp"
     },
     {
-      "item": "minecraft:popped_chorus_fruit"
+      "item": "minecraft:sea_pickle"
     }
   ],
   "result": {
-    "item": "whiffowisp:distant_song_scented_candle",
+    "item": "whiffowisp:seafaring_dream_scented_candle",
     "count": 2
   }
 }

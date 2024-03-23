@@ -8,14 +8,14 @@
       "item": "whiffowisp:netherwax"
     },
     {
-      "item": "minecraft:popped_chorus_fruit"
+      "item": "minecraft:charcoal"
     },
     {
-      "item": "minecraft:popped_chorus_fruit"
+      "item": "minecraft:azure_bluet"
     }
   ],
   "result": {
-    "item": "whiffowisp:distant_song_scented_candle",
+    "item": "whiffowisp:fireside_spat_scented_candle",
     "count": 2
   }
 }

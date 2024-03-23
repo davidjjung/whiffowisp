@@ -1,0 +1,56 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:candle"
+    },
+    {
+      "item": "whiffowisp:netherwax"
+    },
+    [
+      {
+        "item": "minecraft:red_dye"
+      },
+      {
+        "item": "minecraft:orange_dye"
+      },
+      {
+        "item": "minecraft:yellow_dye"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:lime_dye"
+      },
+      {
+        "item": "minecraft:green_dye"
+      },
+      {
+        "item": "minecraft:cyan_dye"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:blue_dye"
+      },
+      {
+        "item": "minecraft:light_blue_dye"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:purple_dye"
+      },
+      {
+        "item": "minecraft:pink_dye"
+      },
+      {
+        "item": "minecraft:magenta_dye"
+      }
+    ]
+  ],
+  "result": {
+    "item": "whiffowisp:arts_and_crafts_scented_candle",
+    "count": 2
+  }
+}

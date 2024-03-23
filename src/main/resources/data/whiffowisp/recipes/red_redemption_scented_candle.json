@@ -8,14 +8,17 @@
       "item": "whiffowisp:netherwax"
     },
     {
-      "item": "minecraft:popped_chorus_fruit"
+      "item": "minecraft:sweet_berries"
     },
     {
-      "item": "minecraft:popped_chorus_fruit"
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:apple"
     }
   ],
   "result": {
-    "item": "whiffowisp:distant_song_scented_candle",
+    "item": "whiffowisp:red_redemption_scented_candle",
     "count": 2
   }
 }
