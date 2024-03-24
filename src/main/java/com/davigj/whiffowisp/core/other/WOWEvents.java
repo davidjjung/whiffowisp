@@ -18,7 +18,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
+import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 import static com.davigj.whiffowisp.core.other.WOWConstants.initializeDailySpecials;
 
 @Mod.EventBusSubscriber(modid = WhiffOWisp.MOD_ID)

@@ -4,21 +4,22 @@ import com.teamabnormals.buzzier_bees.core.registry.BBBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.ForgeRegistries;
 import virtuoel.statement.api.StateRefresher;
 
 import java.util.function.Supplier;
 
-import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
 import static com.davigj.whiffowisp.core.other.WOWConstants.colors;
 
 public class WOWBlockStatements {
     // This utility class adds all the "trimmed" blockstate properties to existing blocks. Thanks, Statement!
+    public static final BooleanProperty TRIMMED = BooleanProperty.create("trimmed");
 
     public static void addTrimStates() {
         // This is one way to do it; write it all out
-//        StateRefresher.INSTANCE.addBlockProperty(Blocks.CANDLE, TRIMMED, false);
+        StateRefresher.INSTANCE.addBlockProperty(Blocks.CANDLE, TRIMMED, false);
         StateRefresher.INSTANCE.addBlockProperty(Blocks.WHITE_CANDLE, TRIMMED, false);
         StateRefresher.INSTANCE.addBlockProperty(Blocks.ORANGE_CANDLE, TRIMMED, false);
         StateRefresher.INSTANCE.addBlockProperty(Blocks.MAGENTA_CANDLE, TRIMMED, false);

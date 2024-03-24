@@ -28,7 +28,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
+import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 
 public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
     private static final Int2ObjectMap<List<Vec3>> PARTICLE_OFFSETS = Util.make(() -> {

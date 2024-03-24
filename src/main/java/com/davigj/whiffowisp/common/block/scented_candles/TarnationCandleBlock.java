@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.ModList;
 
-import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
+import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 
 public class TarnationCandleBlock extends ScentedCandleBlock{
     public TarnationCandleBlock(Properties p_152801_) {

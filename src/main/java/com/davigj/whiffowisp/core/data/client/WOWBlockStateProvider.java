@@ -20,6 +20,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
+
 public class WOWBlockStateProvider extends BlockStateProvider {
     public WOWBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
         super(gen, WhiffOWisp.MOD_ID, exFileHelper);
@@ -75,7 +77,7 @@ public class WOWBlockStateProvider extends BlockStateProvider {
             return ConfiguredModel.builder()
                     .modelFile(model)
                     .build();
-        }, CandleBlock.WATERLOGGED, WOWConstants.BOTTLED, AbstractCandleBlock.LIT, WOWConstants.TRIMMED);
+        }, CandleBlock.WATERLOGGED, WOWConstants.BOTTLED, AbstractCandleBlock.LIT, TRIMMED);
     }
 
     private void trimmedCandle(ScentedCandleBlock block, ResourceLocation candleTexture, ResourceLocation litCandleTexture) {

@@ -17,6 +17,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
+
 @Pseudo
 @Mixin(targets = "net.mehvahdjukaar.supplementaries.common.block.blocks.AbstractCandleSkullBlock")
 public class AbstractCandleSkullBlockMixin {
@@ -25,7 +27,7 @@ public class AbstractCandleSkullBlockMixin {
     private void noSmoke(ParticleType<?> particle, Level level, Vec3 vec3, RandomSource randomSource, CallbackInfo ci) {
         if (ModList.get().isLoaded(WOWConstants.SUPPLEMENTARIES)) {
             BlockState state = level.getBlockState(new BlockPos(vec3));
-            if (state.getValue(WOWConstants.TRIMMED)) {
+            if (state.getValue(TRIMMED)) {
                 float f = randomSource.nextFloat();
                 if (f < 0.17F) {
                     level.playLocalSound(vec3.x + 0.5, vec3.y + 0.5, vec3.z + 0.5, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + randomSource.nextFloat(), randomSource.nextFloat() * 0.7F + 0.3F, false);

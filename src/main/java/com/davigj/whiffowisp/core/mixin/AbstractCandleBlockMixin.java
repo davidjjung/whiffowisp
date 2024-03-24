@@ -1,6 +1,5 @@
 package com.davigj.whiffowisp.core.mixin;
 
-import com.davigj.whiffowisp.core.other.WOWBlockStatements;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -16,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
+import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 
 @Mixin(AbstractCandleBlock.class)
 public class AbstractCandleBlockMixin {

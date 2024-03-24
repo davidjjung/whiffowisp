@@ -16,7 +16,6 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class WOWConstants {
-    public static final BooleanProperty TRIMMED = BooleanProperty.create("trimmed");
     public static final BooleanProperty BOTTLED = BooleanProperty.create("bottled");
 
     public static final String MINECRAFT = "minecraft";

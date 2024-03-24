@@ -18,12 +18,14 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
+
 @Mixin(targets = "net.mehvahdjukaar.supplementaries.common.block.blocks.CandleHolderBlock")
 public class CandleHolderBlockMixin {
     @Inject(method = "addParticlesAndSound", at = @At("HEAD"), cancellable = true, remap = false)
     private void trimmedParticles(Level level, Vec3 vec3, RandomSource random, CallbackInfo ci) {
         BlockState state = level.getBlockState(new BlockPos(vec3));
-        if (state.getValue(WOWConstants.TRIMMED)) {
+        if (state.getValue(TRIMMED)) {
             float f = random.nextFloat();
             if (f < 0.17F) {
                 level.playLocalSound(vec3.x + 0.5, vec3.y + 0.5, vec3.z + 0.5, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + random.nextFloat(), random.nextFloat() * 0.7F + 0.3F, false);
