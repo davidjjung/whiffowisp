@@ -5,13 +5,19 @@ import org.apache.commons.lang3.tuple.Pair;
 
 public class WOWConfig {
     public static class Common {
-        public final ForgeConfigSpec.ConfigValue<Boolean> naturalRemedy;
-        public final ForgeConfigSpec.ConfigValue<Integer> remedyRadius;
+        public final ForgeConfigSpec.ConfigValue<Boolean> scentFX;
+        public final ForgeConfigSpec.ConfigValue<Boolean> redRedemptionTrade;
+        public final ForgeConfigSpec.ConfigValue<Boolean> caravanSpiceTrade;
 
         Common (ForgeConfigSpec.Builder builder) {
             builder.push("changes");
-            naturalRemedy = builder.comment("Do air purifiers nullify nearby candle smoke").define("Natural remedy", true);
-            remedyRadius = builder.comment("The radius in which air purifiers nullify candle smoke").define("Purifier radius", 3);
+            builder.push("candles");
+            scentFX = builder.comment("Do scented candles affect living entities").define("Scent FX", true);
+            builder.pop();
+            builder.push("trades");
+            redRedemptionTrade = builder.comment("Do expert butchers trade red redemption candles").define("Red redemption trade", true);
+            caravanSpiceTrade = builder.comment("Do wandering traders trade caravan spice candles").define("Caravan spice trade", true);
+            builder.pop();
             builder.pop();
         }
     }
