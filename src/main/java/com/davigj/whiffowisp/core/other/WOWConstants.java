@@ -23,6 +23,7 @@ public class WOWConstants {
     public static final ResourceLocation WEAKNESS = new ResourceLocation(MINECRAFT, "weakness");
     public static final ResourceLocation SPEED = new ResourceLocation(MINECRAFT, "speed");
     public static final ResourceLocation BLINDNESS = new ResourceLocation(MINECRAFT, "blindness");
+    public static final ResourceLocation RESISTANCE = new ResourceLocation(MINECRAFT, "resistance");
     public static final ResourceLocation SLOWNESS = new ResourceLocation(MINECRAFT, "slowness");
     public static final ResourceLocation SLOW_FALLING = new ResourceLocation(MINECRAFT, "slow_falling");
     public static final ResourceLocation INVISIBILITY = new ResourceLocation(MINECRAFT, "invisibility");

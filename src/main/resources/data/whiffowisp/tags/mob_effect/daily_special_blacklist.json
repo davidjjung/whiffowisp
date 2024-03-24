@@ -4,6 +4,7 @@
     "minecraft:health_boost",
     "minecraft:instant_health",
     "minecraft:instant_damage",
+    "minecraft:absorption",
     "minecraft:saturation",
     "minecraft:bad_omen",
     {

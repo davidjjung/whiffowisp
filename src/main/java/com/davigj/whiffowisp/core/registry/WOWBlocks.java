@@ -14,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class WOWBlocks {
     public static final BlockSubRegistryHelper HELPER = WhiffOWisp.REGISTRY_HELPER.getBlockSubHelper();
 
-    public static final RegistryObject<Block> RED_REDEMPTION_SCENTED_CANDLE = HELPER.createBlock("red_redemption_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.RED_CANDLE), WOWConstants.MINECRAFT, WOWConstants.ABSORPTION), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> RED_REDEMPTION_SCENTED_CANDLE = HELPER.createBlock("red_redemption_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.RED_CANDLE), WOWConstants.MINECRAFT, WOWConstants.RESISTANCE), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> CARAVAN_SPICE_SCENTED_CANDLE = HELPER.createBlock("caravan_spice_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.BLUE_CANDLE), WOWConstants.MINECRAFT, WOWConstants.SPEED, 1), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> FIRESIDE_SPAT_SCENTED_CANDLE = HELPER.createBlock("fireside_spat_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.BLACK_CANDLE), WOWConstants.MINECRAFT, WOWConstants.BLINDNESS), CreativeModeTab.TAB_DECORATIONS);
 
