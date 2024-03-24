@@ -24,6 +24,7 @@ public class TarnationCandleBlock extends ScentedCandleBlock{
     }
 
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
+        super.affect(level, pos, state, entity);
         if (!level.isClientSide && entity instanceof LivingEntity living) {
             living.addEffect(new MobEffectInstance(new MobEffectInstance(
                     MobEffects.FIRE_RESISTANCE, 20 * state.getValue(CANDLES))));

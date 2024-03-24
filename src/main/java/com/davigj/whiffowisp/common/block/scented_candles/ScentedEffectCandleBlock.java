@@ -32,6 +32,7 @@ public class ScentedEffectCandleBlock extends ScentedCandleBlock{
     }
 
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
+        super.affect(level, pos, state, entity);
         if (!level.isClientSide) {
             if (ModList.get().isLoaded(modid) && entity instanceof LivingEntity living) {
                 living.addEffect(new MobEffectInstance(new MobEffectInstance(

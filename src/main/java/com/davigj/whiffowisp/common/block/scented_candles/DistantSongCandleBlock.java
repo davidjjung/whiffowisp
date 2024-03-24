@@ -23,6 +23,7 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
     }
 
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
+        super.affect(level, pos, state, entity);
         if (entity instanceof LivingEntity living) {
             if (entity instanceof Player player && player.isCrouching()) { return; }
             switch (state.getValue(CANDLES)) {

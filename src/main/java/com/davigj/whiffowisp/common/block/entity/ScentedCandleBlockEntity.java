@@ -2,6 +2,7 @@ package com.davigj.whiffowisp.common.block.entity;
 
 import com.davigj.whiffowisp.common.block.scented_candles.DistantSongCandleBlock;
 import com.davigj.whiffowisp.common.block.scented_candles.ScentedCandleBlock;
+import com.davigj.whiffowisp.core.WOWConfig;
 import com.davigj.whiffowisp.core.registry.WOWBlockEntityTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,6 +19,7 @@ public class ScentedCandleBlockEntity extends BlockEntity {
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, ScentedCandleBlockEntity candle) {
+        if (!WOWConfig.COMMON.scentFX.get()) {return;}
         if (state.getBlock() instanceof DistantSongCandleBlock) {
             return;
         }

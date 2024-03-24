@@ -14,6 +14,7 @@ public class HomesickCandleBlock extends ScentedCandleBlock{
     }
 
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
+        super.affect(level, pos, state, entity);
         if (!level.isClientSide && entity instanceof LivingEntity living) {
             living.addEffect(new MobEffectInstance(new MobEffectInstance(
                     MobEffects.REGENERATION, 20 * state.getValue(CANDLES))));

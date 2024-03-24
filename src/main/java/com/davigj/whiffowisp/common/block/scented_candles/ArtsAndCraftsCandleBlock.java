@@ -21,6 +21,7 @@ public class ArtsAndCraftsCandleBlock extends ScentedCandleBlock {
     }
 
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
+        super.affect(level, pos, state, entity);
         if (!level.isClientSide && entity instanceof LivingEntity living) {
             if (living instanceof Sheep sheep) {
                 if (sheep.tickCount % 300 == 0) {

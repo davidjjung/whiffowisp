@@ -1,6 +1,7 @@
 package com.davigj.whiffowisp.common.block.scented_candles;
 
 import com.davigj.whiffowisp.common.block.entity.ScentedCandleBlockEntity;
+import com.davigj.whiffowisp.core.WOWConfig;
 import com.davigj.whiffowisp.core.registry.WOWBlockEntityTypes;
 import com.google.common.collect.ImmutableList;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -62,7 +63,9 @@ public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
         super.stepOn(level, pos, state, entity);
     }
 
-    public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {    }
+    public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
+        if (!WOWConfig.COMMON.scentFX.get()) {return;}
+    }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(new Property[]{TRIMMED, LIT, CANDLES, WATERLOGGED});
