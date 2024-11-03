@@ -10,7 +10,7 @@ logoFile = "logo.png"
 itemIcon = "minecraft:candle"
 configBackground = "minecraft:textures/block/dirt.png"
 authors = "DavigJ"
-credits = "Art credits go to Tutta, SuperMightByte, and Ghost"
+credits = "Tutta, SuperMightByte, and Ghost"
 displayURL = "https://modrinth.com/mod/whiffowisp"
 displayName = "Whiff O' Wisp"
 description = '''
@@ -20,21 +20,21 @@ description = '''
 [[dependencies.whiffowisp]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,1.19.3)"
+versionRange = "[1.20.1,1.21)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.whiffowisp]]
 modId = "forge"
 mandatory = true
-versionRange = "[43.3.0,)"
+versionRange = "[47.1.3,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.whiffowisp]]
 modId = "blueprint"
 mandatory = true
-versionRange = "[6.2.0,)"
+versionRange = "[7.1.0,)"
 ordering = "AFTER"
 side = "BOTH"
 

@@ -36,7 +36,7 @@ public class ArtsAndCraftsCandleBlock extends ScentedCandleBlock {
                     sheep.setColor(color);
                     RandomSource random = sheep.getRandom();
                     for (int i = 0; i < 4; i++) {
-                        ((ServerLevel)(sheep.level)).sendParticles(ParticleTypes.CLOUD, sheep.getX() + random.nextDouble() - 0.5,
+                        ((ServerLevel)(sheep.level())).sendParticles(ParticleTypes.CLOUD, sheep.getX() + random.nextDouble() - 0.5,
                                 sheep.getEyeY(), sheep.getZ() + random.nextDouble() - 0.5,
                                 1,0.0D, 0.0D, 0.0D,0.01D);
                     }

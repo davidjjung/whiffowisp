@@ -30,5 +30,6 @@
     "recipes": [
       "whiffowisp:netherwax"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

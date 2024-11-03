@@ -20,9 +20,11 @@ import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 @Mixin(AbstractCandleBlock.class)
 public class AbstractCandleBlockMixin {
 
+    // TODO: figure out why these mixins don't work anymore (I hope it has to do with BlockPos's being Vec3i's now)
+
     @Inject(method = "addParticlesAndSound", at = @At("HEAD"), cancellable = true)
     private static void trimmedParticles(Level level, Vec3 vec3, RandomSource random, CallbackInfo ci) {
-        BlockState state = level.getBlockState(new BlockPos(vec3));
+        BlockState state = level.getBlockState(new BlockPos((int) vec3.x, (int) vec3.y, (int) vec3.z));
         if (state.getValue(TRIMMED)) {
             float f = random.nextFloat();
             if (f < 0.17F) {

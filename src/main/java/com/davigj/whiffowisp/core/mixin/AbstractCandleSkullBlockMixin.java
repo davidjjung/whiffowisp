@@ -26,7 +26,7 @@ public class AbstractCandleSkullBlockMixin {
     @Inject(method = "addParticlesAndSound", at = @At("HEAD"), cancellable = true, remap = false)
     private void noSmoke(ParticleType<?> particle, Level level, Vec3 vec3, RandomSource randomSource, CallbackInfo ci) {
         if (ModList.get().isLoaded(WOWConstants.SUPPLEMENTARIES)) {
-            BlockState state = level.getBlockState(new BlockPos(vec3));
+            BlockState state = level.getBlockState(new BlockPos((int) vec3.x, (int) vec3.y, (int) vec3.z));
             if (state.getValue(TRIMMED)) {
                 float f = randomSource.nextFloat();
                 if (f < 0.17F) {

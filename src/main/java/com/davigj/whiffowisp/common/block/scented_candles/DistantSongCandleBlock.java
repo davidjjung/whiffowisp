@@ -7,6 +7,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageSources;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Cow;
@@ -43,7 +44,7 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
             double y = targetPos.getY();
             double z = targetPos.getZ() + 0.5;
             int i = 0;
-            while (!level.getBlockState(new BlockPos(x, y, z)).isAir() && i < 5) {
+            while (!level.getBlockState(new BlockPos((int) x, (int) y, (int) z)).isAir() && i < 5) {
                 i++;
                 y++;
             }
@@ -82,7 +83,7 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
                 }
                 living.playSound(SoundEvents.FIRECHARGE_USE, 0.3F, 4.0F);
             } else {
-                living.hurt(DamageSource.MAGIC, 1.0F);
+                living.hurt(living.damageSources().magic(), 1.0F);
             }
         }
     }

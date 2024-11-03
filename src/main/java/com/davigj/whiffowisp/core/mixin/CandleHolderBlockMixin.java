@@ -24,7 +24,7 @@ import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 public class CandleHolderBlockMixin {
     @Inject(method = "addParticlesAndSound", at = @At("HEAD"), cancellable = true, remap = false)
     private void trimmedParticles(Level level, Vec3 vec3, RandomSource random, CallbackInfo ci) {
-        BlockState state = level.getBlockState(new BlockPos(vec3));
+        BlockState state = level.getBlockState(new BlockPos((int) vec3.x, (int) vec3.y, (int) vec3.z));
         if (state.getValue(TRIMMED)) {
             float f = random.nextFloat();
             if (f < 0.17F) {

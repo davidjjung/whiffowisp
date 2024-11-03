@@ -17,7 +17,7 @@ public class DailySpecialCandleBlock extends ScentedCandleBlock {
 
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
         super.affect(level, pos, state, entity);
-        if (!(entity instanceof LivingEntity) || entity.level.isClientSide) {
+        if (!(entity instanceof LivingEntity) || entity.level().isClientSide) {
             return;
         }
         long daysPassed = level.getDayTime() / 24000;

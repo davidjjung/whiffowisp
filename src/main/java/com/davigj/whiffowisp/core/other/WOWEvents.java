@@ -13,9 +13,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.FlintAndSteelItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -35,7 +32,7 @@ public class WOWEvents {
     @SubscribeEvent
     public static void trimWick(PlayerInteractEvent.RightClickBlock event) {
         Player player = event.getEntity();
-        Level level = player.level;
+        Level level = player.level();
         BlockPos pos = event.getHitVec().getBlockPos();
         BlockState state = level.getBlockState(pos);
         if (player.getItemInHand(event.getHand()).is(Tags.Items.SHEARS) && state.hasProperty(TRIMMED) && !state.getValue(TRIMMED)) {
@@ -47,7 +44,7 @@ public class WOWEvents {
             // TODO: add the other FlintAndSteel game event stuff and whatnot
             if (level instanceof ServerLevel) {
                 BlockParticleOption soot = new BlockParticleOption(ParticleTypes.BLOCK, Blocks.DRIED_KELP_BLOCK.defaultBlockState());
-                ((ServerLevel) player.level).sendParticles(soot.setPos(pos),
+                ((ServerLevel) player.level()).sendParticles(soot.setPos(pos),
                         pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 2, 0, 0 + 0.05D, 0, 0.15D);
             }
         }

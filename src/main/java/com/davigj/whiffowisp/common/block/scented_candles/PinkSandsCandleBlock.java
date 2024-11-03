@@ -82,7 +82,7 @@ public class PinkSandsCandleBlock extends ScentedCandleBlock{
     @SubscribeEvent
     public static void setAlight(PlayerInteractEvent.RightClickBlock event) {
         Player player = event.getEntity();
-        Level level = player.level;
+        Level level = player.level();
         BlockPos pos = event.getHitVec().getBlockPos();
         BlockState state = level.getBlockState(pos);
         ItemStack stack = event.getItemStack();

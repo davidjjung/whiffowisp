@@ -5,6 +5,7 @@ import com.davigj.whiffowisp.core.WhiffOWisp;
 import com.davigj.whiffowisp.core.other.WOWConstants;
 import com.davigj.whiffowisp.core.registry.WOWBlocks;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.AbstractCandleBlock;
 import net.minecraft.world.level.block.Block;
@@ -23,8 +24,8 @@ import java.util.List;
 import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 
 public class WOWBlockStateProvider extends BlockStateProvider {
-    public WOWBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, WhiffOWisp.MOD_ID, exFileHelper);
+    public WOWBlockStateProvider(PackOutput output, ExistingFileHelper helper) {
+        super(output, WhiffOWisp.MOD_ID, helper);
     }
 
     private ResourceLocation key(Block block) {
