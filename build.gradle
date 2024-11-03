@@ -81,6 +81,7 @@ dependencies {
     implementation fg.deobf("maven.modrinth:statement:m8DpH9VB")
     compileOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
     compileOnly fg.deobf("maven.modrinth:supplementaries:XmG1PSb2")
+    compileOnly fg.deobf("maven.modrinth:amendments:qE7sokDv")
     compileOnly fg.deobf("maven.modrinth:moonlight:9L5HTOr8")
 //    runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:W50xMJpW") // Upgrade Aquatic
 //    runtimeOnly fg.deobf("maven.modrinth:b7vOFSIp:d9WQBnra") // Buzzier Bees

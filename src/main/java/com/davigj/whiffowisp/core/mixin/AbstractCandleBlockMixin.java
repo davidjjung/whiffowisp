@@ -5,6 +5,7 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.AbstractCandleBlock;
@@ -24,7 +25,7 @@ public class AbstractCandleBlockMixin {
 
     @Inject(method = "addParticlesAndSound", at = @At("HEAD"), cancellable = true)
     private static void trimmedParticles(Level level, Vec3 vec3, RandomSource random, CallbackInfo ci) {
-        BlockState state = level.getBlockState(new BlockPos((int) vec3.x, (int) vec3.y, (int) vec3.z));
+        BlockState state = level.getBlockState(new BlockPos(Mth.floor(Mth.floor(vec3.x)), Mth.floor(vec3.y), Mth.floor(vec3.z)));
         if (state.getValue(TRIMMED)) {
             float f = random.nextFloat();
             if (f < 0.17F) {

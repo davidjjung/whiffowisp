@@ -6,6 +6,7 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,13 +21,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 
 @Pseudo
-@Mixin(targets = "net.mehvahdjukaar.supplementaries.common.block.blocks.AbstractCandleSkullBlock")
+@Mixin(targets = "net.mehvahdjukaar.amendments.common.block.AbstractCandleSkullBlock")
 public class AbstractCandleSkullBlockMixin {
-
     @Inject(method = "addParticlesAndSound", at = @At("HEAD"), cancellable = true, remap = false)
     private void noSmoke(ParticleType<?> particle, Level level, Vec3 vec3, RandomSource randomSource, CallbackInfo ci) {
         if (ModList.get().isLoaded(WOWConstants.SUPPLEMENTARIES)) {
-            BlockState state = level.getBlockState(new BlockPos((int) vec3.x, (int) vec3.y, (int) vec3.z));
+            BlockState state = level.getBlockState(new BlockPos(Mth.floor(Mth.floor(vec3.x)), Mth.floor(vec3.y), Mth.floor(vec3.z)));
             if (state.getValue(TRIMMED)) {
                 float f = randomSource.nextFloat();
                 if (f < 0.17F) {
