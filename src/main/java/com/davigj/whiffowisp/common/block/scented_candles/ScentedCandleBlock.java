@@ -35,17 +35,17 @@ public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
     private static final Int2ObjectMap<List<Vec3>> PARTICLE_OFFSETS = Util.make(() -> {
         Int2ObjectMap<List<Vec3>> int2objectmap = new Int2ObjectOpenHashMap<>();
         int2objectmap.defaultReturnValue(ImmutableList.of());
-        int2objectmap.put(1, ImmutableList.of(new Vec3(0.5D, 0.500D, 0.5D)));
-        int2objectmap.put(2, ImmutableList.of(new Vec3(0.5D, 0.688D, 0.5D)));
-        int2objectmap.put(3, ImmutableList.of(new Vec3(0.5D, 0.875D, 0.5D)));
-        int2objectmap.put(4, ImmutableList.of(new Vec3(0.5D, 1.050D, 0.5D)));
+        int2objectmap.put(1, ImmutableList.of(new Vec3(0.5D, 0.5D, 0.5D)));
+        int2objectmap.put(2, ImmutableList.of(new Vec3(0.313D, 0.5D, 0.56D), new Vec3(0.6825D, 0.6825D, 0.44D)));
+        int2objectmap.put(3, ImmutableList.of(new Vec3(0.313D, 0.5D, 0.44D), new Vec3(0.625D, 0.6825D, 0.3125D), new Vec3(0.56D, 0.375D, 0.6875D)));
+        int2objectmap.put(4, ImmutableList.of(new Vec3(0.313D, 0.5D, 0.38D), new Vec3(0.625D, 0.6825D, 0.3125D), new Vec3(0.38D, 0.375D, 0.6875D), new Vec3(0.6875D, 0.5D, 0.63D)));
         return Int2ObjectMaps.unmodifiable(int2objectmap);
     });
 
     private static final VoxelShape ONE_AABB = Block.box(6.0D, 0.0D, 6.0D, 10.0D, 6.0D, 10.0D);
-    private static final VoxelShape TWO_AABB = Block.box(6.0D, 0.0D, 6.0D, 10.0D, 9.0D, 10.0D);
-    private static final VoxelShape THREE_AABB = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 12.0D, 11.0D);
-    private static final VoxelShape FOUR_AABB = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 14.0D, 12.0D);
+    private static final VoxelShape TWO_AABB = Block.box(3.0D, 0.0D, 5.0D, 13.0D, 6.0D, 11.0D);
+    private static final VoxelShape THREE_AABB = Block.box(3.0D, 0.0D, 3.0D, 12.0D, 6.0D, 13.0D);
+    private static final VoxelShape FOUR_AABB = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 6.0D, 13.0D);
 
     public ScentedCandleBlock(Properties p_152801_) {
         super(p_152801_);

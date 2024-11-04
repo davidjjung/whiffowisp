@@ -1,7 +1,0 @@
-{
-  "parent": "whiffowisp:block/large_scented_candle",
-  "textures": {
-    "all": "whiffowisp:block/red_redemption_scented_candle_large",
-    "particle": "whiffowisp:block/red_redemption_scented_candle_large"
-  }
-}

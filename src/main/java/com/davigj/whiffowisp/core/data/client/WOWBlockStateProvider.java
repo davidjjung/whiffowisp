@@ -56,14 +56,14 @@ public class WOWBlockStateProvider extends BlockStateProvider {
 //        this.scentedCandle((ScentedCandleBlock) WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get(), "whiffowisp:block/daily_special_scented_candle");
     }
     private void scentedCandle(ScentedCandleBlock block, String candleName) {
-        ModelFile smallCandle = models().withExistingParent(name(block) + "_small", mcLoc("whiffowisp:block/small_scented_candle"))
-                .texture("all", new ResourceLocation(candleName + "_small")).texture("particle", new ResourceLocation(candleName + "_small"));
-        ModelFile mediumCandle = models().withExistingParent(name(block) + "_medium", mcLoc("whiffowisp:block/medium_scented_candle"))
-                .texture("all", new ResourceLocation(candleName + "_medium")).texture("particle", new ResourceLocation(candleName + "_medium"));
-        ModelFile bigCandle = models().withExistingParent(name(block) + "_big", mcLoc("whiffowisp:block/big_scented_candle"))
-                .texture("all", new ResourceLocation(candleName + "_big")).texture("particle", new ResourceLocation(candleName + "_big"));
-        ModelFile largeCandle = models().withExistingParent(name(block) + "_large", mcLoc("whiffowisp:block/large_scented_candle"))
-                .texture("all", new ResourceLocation(candleName + "_large")).texture("particle", new ResourceLocation(candleName + "_large"));
+        ModelFile smallCandle = models().withExistingParent(name(block), mcLoc("whiffowisp:block/scented_candle"))
+                .texture("all", new ResourceLocation(candleName)).texture("particle", new ResourceLocation(candleName));
+        ModelFile mediumCandle = models().withExistingParent(name(block) + "_two", mcLoc("whiffowisp:block/two_scented_candles"))
+                .texture("all", new ResourceLocation(candleName)).texture("particle", new ResourceLocation(candleName));
+        ModelFile bigCandle = models().withExistingParent(name(block) + "_three", mcLoc("whiffowisp:block/three_scented_candles"))
+                .texture("all", new ResourceLocation(candleName)).texture("particle", new ResourceLocation(candleName));
+        ModelFile largeCandle = models().withExistingParent(name(block) + "_four", mcLoc("whiffowisp:block/four_scented_candles"))
+                .texture("all", new ResourceLocation(candleName)).texture("particle", new ResourceLocation(candleName));
         scentedCandle(block, smallCandle, mediumCandle, bigCandle, largeCandle);
     }
 
@@ -78,7 +78,7 @@ public class WOWBlockStateProvider extends BlockStateProvider {
             return ConfiguredModel.builder()
                     .modelFile(model)
                     .build();
-        }, CandleBlock.WATERLOGGED, WOWConstants.BOTTLED, AbstractCandleBlock.LIT, TRIMMED);
+        }, CandleBlock.WATERLOGGED, AbstractCandleBlock.LIT, TRIMMED);
     }
 
     private void trimmedCandle(ScentedCandleBlock block, ResourceLocation candleTexture, ResourceLocation litCandleTexture) {
