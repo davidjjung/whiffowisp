@@ -3,14 +3,13 @@ package com.davigj.whiffowisp.core.registry;
 import com.davigj.whiffowisp.common.block.entity.ScentedCandleBlockEntity;
 import com.davigj.whiffowisp.core.WhiffOWisp;
 import com.teamabnormals.blueprint.core.util.registry.BlockEntitySubRegistryHelper;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
 
-@EventBusSubscriber(modid = WhiffOWisp.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = WhiffOWisp.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class WOWBlockEntityTypes {
     public static final BlockEntitySubRegistryHelper HELPER = WhiffOWisp.REGISTRY_HELPER.getBlockEntitySubHelper();
 
