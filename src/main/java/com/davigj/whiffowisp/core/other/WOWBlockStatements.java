@@ -1,6 +1,7 @@
 package com.davigj.whiffowisp.core.other;
 
 import com.teamabnormals.buzzier_bees.core.registry.BBBlocks;
+import net.jadenxgamer.netherexp.registry.block.JNEBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -54,6 +55,11 @@ public class WOWBlockStatements {
                 StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_soul").get(), TRIMMED, false);
                 StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_soul_wall").get(), TRIMMED, false);
             }
+        }
+
+        if (ModList.get().isLoaded(WOWConstants.JNE)) {
+            // The reason this class is called during the common setup method is because these are run *after* forge has finished registering blocks
+            StateRefresher.INSTANCE.addBlockProperty(JNEBlocks.SOUL_CANDLE.get(), TRIMMED, false);
         }
     }
 

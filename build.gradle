@@ -79,10 +79,15 @@ dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
     implementation fg.deobf("com.teamabnormals:blueprint:${project.minecraft}-${project.blueprint}")
     implementation fg.deobf("maven.modrinth:statement:m8DpH9VB")
+
     compileOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
     compileOnly fg.deobf("maven.modrinth:supplementaries:XmG1PSb2")
     compileOnly fg.deobf("maven.modrinth:amendments:qE7sokDv")
     compileOnly fg.deobf("maven.modrinth:moonlight:9L5HTOr8")
+
+    compileOnly fg.deobf("maven.modrinth:terrablender:HI0iCUpi")
+    compileOnly fg.deobf("maven.modrinth:architectury-api:1MKTLiiG")
+    compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:AaRZWbVA")
 //    runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:W50xMJpW") // Upgrade Aquatic
 //    runtimeOnly fg.deobf("maven.modrinth:b7vOFSIp:d9WQBnra") // Buzzier Bees
 //    runtimeOnly fg.deobf("maven.modrinth:neapolitan:8qmVV9M7") // Neapolitan
