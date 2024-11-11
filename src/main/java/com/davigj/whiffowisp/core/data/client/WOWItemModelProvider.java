@@ -26,6 +26,14 @@ public class WOWItemModelProvider extends ItemModelProvider {
         this.generatedItem((ItemLike) WOWBlocks.FIRESIDE_SPAT_SCENTED_CANDLE.get());
         this.generatedItem((ItemLike) WOWBlocks.RED_REDEMPTION_SCENTED_CANDLE.get());
         this.generatedItem((ItemLike) WOWBlocks.SEAFARING_DREAM_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.SOFT_BLANKET_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.VANILLA_BUNNY_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.FOREST_HAZE_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.MIDSUMMER_NIGHT_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.TARNATION_SCENTED_CANDLE.get());
+        this.generatedItem((ItemLike) WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get());
     }
 
     private void generatedItem(ItemLike item) {

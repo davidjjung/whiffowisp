@@ -50,16 +50,15 @@ public class WOWLootTableProvider extends LootTableProvider {
             this.add(WOWBlocks.ARTS_AND_CRAFTS_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.ARTS_AND_CRAFTS_SCENTED_CANDLE.get()));
             this.add(WOWBlocks.HOMESICK_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.HOMESICK_SCENTED_CANDLE.get()));
             this.add(WOWBlocks.DISTANT_SONG_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.DISTANT_SONG_SCENTED_CANDLE.get()));
-            /*
-            this.add(WOWBlocks.SOFT_BLANKET_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
-            this.add(WOWBlocks.VANILLA_BUNNY_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
-            this.add(WOWBlocks.FOREST_HAZE_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
-            this.add(WOWBlocks.MIDSUMMER_NIGHT_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
-            this.add(WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
-            this.add(WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
-            this.add(WOWBlocks.TARNATION_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
-            this.add(WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get(), WOWBlockLoot::createCandleDrops);
-            */
+
+            this.add(WOWBlocks.SOFT_BLANKET_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.SOFT_BLANKET_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.VANILLA_BUNNY_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.VANILLA_BUNNY_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.FOREST_HAZE_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.FOREST_HAZE_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.MIDSUMMER_NIGHT_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.MIDSUMMER_NIGHT_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.TARNATION_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.TARNATION_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get()));
         }
 
 

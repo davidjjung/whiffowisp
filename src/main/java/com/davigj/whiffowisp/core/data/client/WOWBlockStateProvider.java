@@ -46,14 +46,14 @@ public class WOWBlockStateProvider extends BlockStateProvider {
         this.scentedCandle((ScentedCandleBlock) WOWBlocks.HOMESICK_SCENTED_CANDLE.get(), "whiffowisp:block/homesick_scented_candle");
         this.scentedCandle((ScentedCandleBlock) WOWBlocks.DISTANT_SONG_SCENTED_CANDLE.get(), "whiffowisp:block/distant_song_scented_candle");
 
-//        this.scentedCandle((ScentedCandleBlock) WOWBlocks.SOFT_BLANKET_SCENTED_CANDLE.get(), "whiffowisp:block/soft_blanket_scented_candle");
-//        this.scentedCandle((ScentedCandleBlock) WOWBlocks.VANILLA_BUNNY_SCENTED_CANDLE.get(), "whiffowisp:block/vanilla_bunny_scented_candle");
-//        this.scentedCandle((ScentedCandleBlock) WOWBlocks.FOREST_HAZE_SCENTED_CANDLE.get(), "whiffowisp:block/forest_haze_scented_candle");
-//        this.scentedCandle((ScentedCandleBlock) WOWBlocks.MIDSUMMER_NIGHT_SCENTED_CANDLE.get(), "whiffowisp:block/midsummer_night_scented_candle");
-//        this.scentedCandle((ScentedCandleBlock) WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get(), "whiffowisp:block/autumn_wreath_scented_candle");
-//        this.scentedCandle((ScentedCandleBlock) WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get(), "whiffowisp:block/pink_sands_scented_candle");
-//        this.scentedCandle((ScentedCandleBlock) WOWBlocks.TARNATION_SCENTED_CANDLE.get(), "whiffowisp:block/tarnation_scented_candle");
-//        this.scentedCandle((ScentedCandleBlock) WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get(), "whiffowisp:block/daily_special_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.SOFT_BLANKET_SCENTED_CANDLE.get(), "whiffowisp:block/soft_blanket_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.VANILLA_BUNNY_SCENTED_CANDLE.get(), "whiffowisp:block/vanilla_bunny_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.FOREST_HAZE_SCENTED_CANDLE.get(), "whiffowisp:block/forest_haze_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.MIDSUMMER_NIGHT_SCENTED_CANDLE.get(), "whiffowisp:block/midsummer_night_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get(), "whiffowisp:block/autumn_wreath_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get(), "whiffowisp:block/pink_sands_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.TARNATION_SCENTED_CANDLE.get(), "whiffowisp:block/tarnation_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get(), "whiffowisp:block/daily_special_scented_candle");
     }
     private void scentedCandle(ScentedCandleBlock block, String candleName) {
         ModelFile smallCandle = models().withExistingParent(name(block), mcLoc("whiffowisp:block/scented_candle"))
