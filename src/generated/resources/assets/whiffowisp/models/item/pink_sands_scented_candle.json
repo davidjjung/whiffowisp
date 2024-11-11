@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "whiffowisp:item/pink_sands_scented_candle"
+  }
+}

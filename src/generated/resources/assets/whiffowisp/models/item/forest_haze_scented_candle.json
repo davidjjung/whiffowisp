@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "whiffowisp:item/forest_haze_scented_candle"
+  }
+}

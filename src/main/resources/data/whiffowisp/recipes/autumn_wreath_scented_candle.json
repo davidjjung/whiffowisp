@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "autumnity"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:candle"
+    },
+    {
+      "item": "whiffowisp:netherwax"
+    },
+    {
+      "item": "minecraft:pumpkin_seeds"
+    },
+    {
+      "item": "autumnity:sap_bottle"
+    }
+  ],
+  "result": {
+    "item": "whiffowisp:autumn_wreath_scented_candle",
+    "count": 2
+  }
+}

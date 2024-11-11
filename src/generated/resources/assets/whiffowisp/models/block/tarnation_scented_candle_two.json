@@ -1,0 +1,7 @@
+{
+  "parent": "whiffowisp:block/two_scented_candles",
+  "textures": {
+    "all": "whiffowisp:block/tarnation_scented_candle",
+    "particle": "whiffowisp:block/tarnation_scented_candle"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "whiffowisp:item/autumn_wreath_scented_candle"
+  }
+}

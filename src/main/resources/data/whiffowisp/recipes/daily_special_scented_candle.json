@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "caverns_and_chasms"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:candle"
+    },
+    {
+      "item": "whiffowisp:netherwax"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "caverns_and_chasms:spinel"
+    }
+  ],
+  "result": {
+    "item": "whiffowisp:autumn_wreath_scented_candle",
+    "count": 2
+  }
+}

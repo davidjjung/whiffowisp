@@ -1,0 +1,31 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "spelunkery"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "upgrade_aquatic"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:candle"
+    },
+    {
+      "item": "whiffowisp:netherwax"
+    },
+    {
+      "item": "spelunkery:salt"
+    },
+    {
+      "item": "upgrade_aquatic:pink_searocket"
+    }
+  ],
+  "result": {
+    "item": "whiffowisp:pink_sands_scented_candle",
+    "count": 2
+  }
+}

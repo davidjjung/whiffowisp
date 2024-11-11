@@ -1,0 +1,31 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "architects_palette"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "buzzier_bees"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "buzzier_bees:soul_candle"
+    },
+    {
+      "item": "whiffowisp:netherwax"
+    },
+    {
+      "item": "architects_palette:nether_brass_blend"
+    },
+    {
+      "item": "architects_palette:nether_brass_blend"
+    }
+  ],
+  "result": {
+    "item": "whiffowisp:tarnation_scented_candle",
+    "count": 2
+  }
+}
