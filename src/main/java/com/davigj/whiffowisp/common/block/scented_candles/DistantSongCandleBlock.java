@@ -41,7 +41,7 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
         BlockPos targetPos = findPos(playerPos, level, xOffset, zOffset);
         if (targetPos != null) {
             double x = targetPos.getX() + 0.5;
-            double y = targetPos.getY() + 0.2;
+            double y = targetPos.getY();
             double z = targetPos.getZ() + 0.5;
             int i = 0;
             while (!level.getBlockState(new BlockPos((int) x, (int) y, (int) z)).isAir() && i < 5) {
@@ -54,7 +54,7 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
                     return;
                 }
                 if (!level.isClientSide) {
-                    living.teleportTo(x, y, z);
+                    living.teleportTo(x, y + 0.75, z);
                     living.resetFallDistance();
                     if (!(living instanceof Player)) living.playSound(SoundEvents.ENDERMAN_TELEPORT, 0.12F, 1.3F + living.getRandom().nextFloat());
                 } else {

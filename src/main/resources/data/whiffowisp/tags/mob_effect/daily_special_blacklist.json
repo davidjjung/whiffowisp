@@ -1,11 +1,7 @@
 {
   "values": [
     "minecraft:hero_of_the_village",
-    "minecraft:health_boost",
-    "minecraft:instant_health",
-    "minecraft:instant_damage",
     "minecraft:absorption",
-    "minecraft:saturation",
     "minecraft:bad_omen",
     {
       "id": "neapolitan:vanilla_scent",
@@ -13,10 +9,6 @@
     },
     {
       "id": "autumnity:extension",
-      "required": false
-    },
-    {
-      "id": "autumnity:foul_taste",
       "required": false
     }
   ]
