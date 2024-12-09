@@ -49,9 +49,9 @@ public class WOWConstants {
 
     private static boolean isBlacklisted(MobEffect effect) {
         ITagManager<MobEffect> mobEffectTags = ForgeRegistries.MOB_EFFECTS.tags();
-        if (mobEffectTags == null || effect.isInstantenous()) {
+        if (mobEffectTags == null) {
             return false;
         }
-        return mobEffectTags.getTag(WOWMobEffectTags.DAILY_SPECIAL_BLACKLIST).contains(effect);
+        return mobEffectTags.getTag(WOWMobEffectTags.DAILY_SPECIAL_BLACKLIST).contains(effect) || effect.isInstantenous();
     }
 }
