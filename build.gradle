@@ -83,16 +83,22 @@ dependencies {
     compileOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
     compileOnly fg.deobf("maven.modrinth:supplementaries:XmG1PSb2")
     compileOnly fg.deobf("maven.modrinth:amendments:qE7sokDv")
-    compileOnly fg.deobf("maven.modrinth:moonlight:9L5HTOr8")
+    compileOnly fg.deobf("maven.modrinth:moonlight:KY2JXZYq")
 
     compileOnly fg.deobf("maven.modrinth:terrablender:HI0iCUpi")
     compileOnly fg.deobf("maven.modrinth:architectury-api:1MKTLiiG")
     compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:AaRZWbVA")
-//    runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:W50xMJpW") // Upgrade Aquatic
-//    runtimeOnly fg.deobf("maven.modrinth:b7vOFSIp:d9WQBnra") // Buzzier Bees
-//    runtimeOnly fg.deobf("maven.modrinth:neapolitan:8qmVV9M7") // Neapolitan
-//    runtimeOnly fg.deobf("maven.modrinth:autumnity:zukiG2Xb") // Autumnity
-//    runtimeOnly fg.deobf("maven.modrinth:vt0VyseM:3NNRjDeC") // Architect's Palette
+
+    runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:8oPpOKDw")
+    runtimeOnly fg.deobf("maven.modrinth:spelunkery:uPfxW6wx")
+    runtimeOnly fg.deobf("maven.modrinth:supplementaries:XmG1PSb2")
+    runtimeOnly fg.deobf("maven.modrinth:moonlight:KY2JXZYq")
+    runtimeOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
+    runtimeOnly fg.deobf("maven.modrinth:neapolitan:bSOBBF52")
+    runtimeOnly fg.deobf("maven.modrinth:autumnity:dNSKgdoR")
+    runtimeOnly fg.deobf("maven.modrinth:farmers-delight:MG1Xuspn")
+    runtimeOnly fg.deobf("maven.modrinth:architects-palette:bZg21BDb")
+    runtimeOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
 
 
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-common-api:${project.jei}")
