@@ -88,6 +88,7 @@ dependencies {
     compileOnly fg.deobf("maven.modrinth:terrablender:HI0iCUpi")
     compileOnly fg.deobf("maven.modrinth:architectury-api:1MKTLiiG")
     compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:AaRZWbVA")
+    compileOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
 
     runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:8oPpOKDw")
     runtimeOnly fg.deobf("maven.modrinth:spelunkery:uPfxW6wx")

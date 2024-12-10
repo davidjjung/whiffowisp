@@ -7,6 +7,7 @@ public class WOWConfig {
     public static class Common {
         public final ForgeConfigSpec.ConfigValue<Boolean> scentFX;
         public final ForgeConfigSpec.ConfigValue<Boolean> redRedemptionTrade;
+        public final ForgeConfigSpec.ConfigValue<Boolean> softBlanketTrade;
         public final ForgeConfigSpec.ConfigValue<Boolean> caravanSpiceTrade;
 
         Common (ForgeConfigSpec.Builder builder) {
@@ -16,6 +17,7 @@ public class WOWConfig {
             builder.pop();
             builder.push("trades");
             redRedemptionTrade = builder.comment("Do expert butchers trade red redemption candles").define("Red redemption trade", true);
+            softBlanketTrade = builder.comment("Do expert butchers trade soft blanket candles").define("Soft blanket trade", true);
             caravanSpiceTrade = builder.comment("Do wandering traders trade caravan spice candles").define("Caravan spice trade", true);
             builder.pop();
             builder.pop();

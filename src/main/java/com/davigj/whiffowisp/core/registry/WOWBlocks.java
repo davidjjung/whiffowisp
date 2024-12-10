@@ -31,7 +31,7 @@ public class WOWBlocks {
 
     public static final RegistryObject<Block> SOFT_BLANKET_SCENTED_CANDLE = HELPER.createBlock("soft_blanket_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.WHITE_CANDLE), WOWConstants.MINECRAFT, WOWConstants.WEAKNESS));
     public static final RegistryObject<Block> VANILLA_BUNNY_SCENTED_CANDLE = HELPER.createBlock("vanilla_bunny_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.LIGHT_BLUE_CANDLE), WOWConstants.MINECRAFT, WOWConstants.JUMP_BOOST, 1));
-    public static final RegistryObject<Block> FOREST_HAZE_SCENTED_CANDLE = HELPER.createBlock("forest_haze_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.GREEN_CANDLE), WOWConstants.MINECRAFT, WOWConstants.SLOWNESS));
+    public static final RegistryObject<Block> FOREST_HAZE_SCENTED_CANDLE = HELPER.createBlock("forest_haze_scented_candle", () -> new ForestHazeCandleBlock(Block.Properties.copy(Blocks.GREEN_CANDLE)));
     public static final RegistryObject<Block> MIDSUMMER_NIGHT_SCENTED_CANDLE = HELPER.createBlock("midsummer_night_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.BLACK_CANDLE), WOWConstants.MINECRAFT, WOWConstants.INVISIBILITY));
     public static final RegistryObject<Block> AUTUMN_WREATH_SCENTED_CANDLE = HELPER.createBlock("autumn_wreath_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.ORANGE_CANDLE), WOWConstants.MINECRAFT, WOWConstants.SLOW_FALLING));
 
