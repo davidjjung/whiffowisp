@@ -100,6 +100,7 @@ dependencies {
     runtimeOnly fg.deobf("maven.modrinth:farmers-delight:MG1Xuspn")
     runtimeOnly fg.deobf("maven.modrinth:architects-palette:bZg21BDb")
     runtimeOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
+    runtimeOnly fg.deobf("maven.modrinth:caverns-and-chasms:fsal1BlK")
 
 
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-common-api:${project.jei}")

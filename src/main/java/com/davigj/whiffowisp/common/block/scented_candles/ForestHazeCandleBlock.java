@@ -26,6 +26,11 @@ public class ForestHazeCandleBlock extends ScentedCandleBlock {
         if (!level.isClientSide && entity instanceof LivingEntity living) {
             living.addEffect(new MobEffectInstance(new MobEffectInstance(
                     MobEffects.MOVEMENT_SLOWDOWN, 20 * state.getValue(CANDLES))));
+
+            if (ModList.get().isLoaded("doom_and_gloom")) {
+                living.addEffect(new MobEffectInstance(new MobEffectInstance(
+                        OEffects.FOG.get(), 20 * state.getValue(CANDLES))));
+            }
         }
     }
 
@@ -33,10 +38,6 @@ public class ForestHazeCandleBlock extends ScentedCandleBlock {
         if (state.getValue(LIT)) {
             affect(level, pos, state, entity);
         }
-
-        if (ModList.get().isLoaded("doom_and_gloom") && entity instanceof LivingEntity living)
-            living.addEffect(new MobEffectInstance(new MobEffectInstance(
-                    OEffects.FOG.get(), 20 * state.getValue(CANDLES))));
         super.stepOn(level, pos, state, entity);
     }
 }
