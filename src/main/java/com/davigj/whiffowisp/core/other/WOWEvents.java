@@ -4,7 +4,6 @@ import com.davigj.whiffowisp.core.WOWConfig;
 import com.davigj.whiffowisp.core.WhiffOWisp;
 import com.davigj.whiffowisp.core.registry.WOWBlocks;
 import com.teamabnormals.blueprint.core.util.TradeUtil;
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
@@ -12,13 +11,13 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.FlintAndSteelItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.event.ViewportEvent;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -39,17 +38,18 @@ public class WOWEvents {
         BlockPos pos = event.getHitVec().getBlockPos();
         BlockState state = level.getBlockState(pos);
         if (player.getItemInHand(event.getHand()).is(Tags.Items.SHEARS) && state.hasProperty(TRIMMED) && !state.getValue(TRIMMED)) {
-            player.swing(event.getHand());
-            event.setCancellationResult(InteractionResult.CONSUME);
-            event.setCanceled(true);
             level.playSound((Player) null, pos, SoundEvents.SHEEP_SHEAR, SoundSource.BLOCKS, 0.9F, 1.2F);
-            level.setBlock(pos, state.setValue(TRIMMED, Boolean.valueOf(true)), 11);
-            // TODO: add the other FlintAndSteel game event stuff and whatnot
+            level.setBlock(pos, state.setValue(TRIMMED, Boolean.TRUE), 11);
+            level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);                player.getItemInHand(event.getHand()).hurtAndBreak(1, player, (p_41303_) -> {
+                p_41303_.broadcastBreakEvent(event.getHand());
+            });
             if (level instanceof ServerLevel) {
                 BlockParticleOption soot = new BlockParticleOption(ParticleTypes.BLOCK, Blocks.DRIED_KELP_BLOCK.defaultBlockState());
                 ((ServerLevel) player.level()).sendParticles(soot.setPos(pos),
                         pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 2, 0, 0 + 0.05D, 0, 0.15D);
             }
+            event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
+            event.setCanceled(true);
         }
     }
 
