@@ -9,11 +9,13 @@ public class WOWConfig {
         public final ForgeConfigSpec.ConfigValue<Boolean> redRedemptionTrade;
         public final ForgeConfigSpec.ConfigValue<Boolean> softBlanketTrade;
         public final ForgeConfigSpec.ConfigValue<Boolean> caravanSpiceTrade;
+        public final ForgeConfigSpec.ConfigValue<Integer> dailySpecialDuration;
 
         Common (ForgeConfigSpec.Builder builder) {
             builder.push("changes");
             builder.push("candles");
             scentFX = builder.comment("Do scented candles affect living entities").define("Scent FX", true);
+            dailySpecialDuration = builder.comment("Ticks per day for daily scented candles").define("Daily special duration", 24000);
             builder.pop();
             builder.push("trades");
             redRedemptionTrade = builder.comment("Do expert butchers trade red redemption candles").define("Red redemption trade", true);

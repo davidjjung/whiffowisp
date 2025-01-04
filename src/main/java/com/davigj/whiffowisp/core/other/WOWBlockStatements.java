@@ -58,7 +58,6 @@ public class WOWBlockStatements {
         }
 
         if (ModList.get().isLoaded(WOWConstants.JNE)) {
-            // The reason this class is called during the common setup method is because these are run *after* forge has finished registering blocks
             StateRefresher.INSTANCE.addBlockProperty(JNEBlocks.SOUL_CANDLE.get(), TRIMMED, false);
         }
     }

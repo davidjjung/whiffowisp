@@ -85,9 +85,8 @@ dependencies {
     compileOnly fg.deobf("maven.modrinth:amendments:qE7sokDv")
     compileOnly fg.deobf("maven.modrinth:moonlight:KY2JXZYq")
 
-    compileOnly fg.deobf("maven.modrinth:terrablender:HI0iCUpi")
-    compileOnly fg.deobf("maven.modrinth:architectury-api:1MKTLiiG")
-    compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:AaRZWbVA")
+    compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:wcJNDsEi")
+    compileOnly fg.deobf("maven.modrinth:elysium-api:wcq14XyS")
     compileOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
 
     runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:8oPpOKDw")
@@ -101,6 +100,8 @@ dependencies {
     runtimeOnly fg.deobf("maven.modrinth:architects-palette:bZg21BDb")
     runtimeOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
     runtimeOnly fg.deobf("maven.modrinth:caverns-and-chasms:fsal1BlK")
+//    runtimeOnly fg.deobf("maven.modrinth:jadens-nether-expansion:wcJNDsEi")
+    runtimeOnly fg.deobf("maven.modrinth:elysium-api:wcq14XyS")
 
 
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-common-api:${project.jei}")

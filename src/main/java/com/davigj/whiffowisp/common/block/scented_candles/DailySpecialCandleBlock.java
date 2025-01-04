@@ -1,5 +1,6 @@
 package com.davigj.whiffowisp.common.block.scented_candles;
 
+import com.davigj.whiffowisp.core.WOWConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -20,7 +21,7 @@ public class DailySpecialCandleBlock extends ScentedCandleBlock {
         if (!(entity instanceof LivingEntity) || entity.level().isClientSide) {
             return;
         }
-        long daysPassed = level.getDayTime() / 24000;
+        long daysPassed = level.getDayTime() / WOWConfig.COMMON.dailySpecialDuration.get();
         for (int i = 0; i < 4; i++) {
             int index = (int) ((daysPassed + (i * Math.min(daysPassed, 12))) % (availableEffects.size()));
             MobEffect effect = availableEffects.get(index);
