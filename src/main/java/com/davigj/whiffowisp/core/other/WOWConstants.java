@@ -20,9 +20,11 @@ public class WOWConstants {
     public static final ResourceLocation JUMP_BOOST = new ResourceLocation(MINECRAFT, "jump_boost");
 
     public static final String SUPPLEMENTARIES = "supplementaries";
+    public static final String AMENDMENTS = "amendments";
     public static final String BUZZIER_BEES = "buzzier_bees";
     public static final String ARCHITECTS_PALETTE = "architects_palette";
     public static final String JNE = "netherexp";
+    public static final String TF = "twilightforest";
 
     public static final String[] colors = new String[]{"white", "orange", "magenta", "light_blue", "light_gray", "gray", "black", "blue",
     "red", "green", "lime", "pink", "yellow", "purple", "cyan", "brown"};

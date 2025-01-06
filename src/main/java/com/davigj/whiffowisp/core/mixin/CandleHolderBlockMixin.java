@@ -2,6 +2,9 @@ package com.davigj.whiffowisp.core.mixin;
 
 import com.davigj.whiffowisp.core.other.WOWBlockStatements;
 import com.davigj.whiffowisp.core.other.WOWConstants;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.llamalad7.mixinextras.sugar.Local;
 import com.teamabnormals.buzzier_bees.core.registry.BBParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
@@ -23,24 +26,14 @@ import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 
 @Mixin(targets = "net.mehvahdjukaar.supplementaries.common.block.blocks.CandleHolderBlock")
 public class CandleHolderBlockMixin {
-    @Inject(method = "addParticlesAndSound", at = @At("HEAD"), cancellable = true, remap = false)
-    private void trimmedParticles(Level level, Vec3 vec3, RandomSource random, CallbackInfo ci) {
-        BlockState state = level.getBlockState(new BlockPos(Mth.floor(Mth.floor(vec3.x)), Mth.floor(vec3.y), Mth.floor(vec3.z)));
-        if (state.getValue(TRIMMED)) {
-            float f = random.nextFloat();
-            if (f < 0.17F) {
-                level.playLocalSound(vec3.x + 0.5, vec3.y + 0.5, vec3.z + 0.5, SoundEvents.CANDLE_AMBIENT, SoundSource.BLOCKS, 1.0F + random.nextFloat(), random.nextFloat() * 0.7F + 0.3F, false);
-            }
-            ParticleOptions particle = ParticleTypes.SMALL_FLAME;
-            if (ModList.get().isLoaded(WOWConstants.BUZZIER_BEES)) {
-                // This feels... less than ideal
-                if (state.getBlock().getDescriptionId().equals("block.supplementaries.candle_holder_soul") || state.getBlock().getDescriptionId().equals("block.supplementaries.candle_holder_soul_wall")) {
-                    particle = BBParticleTypes.SMALL_SOUL_FIRE_FLAME.get();
-                }
-            }
+    @WrapOperation(method = "addParticlesAndSound", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;addParticle(Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V", ordinal = 0), remap = false)
+    private void noSmoke(Level instance, ParticleOptions p_46631_, double p_46632_, double p_46633_, double p_46634_,
+                         double p_46635_, double p_46636_, double p_46637_, Operation<Void> original, @Local(argsOnly = true) Vec3 vec3) {
+        BlockState state = instance.getBlockState(new BlockPos(Mth.floor(Mth.floor(vec3.x)), Mth.floor(vec3.y - 0.05), Mth.floor(vec3.z)));
 
-            level.addParticle((ParticleOptions) particle, vec3.x, vec3.y, vec3.z, 0.0, 0.0, 0.0);
-            ci.cancel();
+        if (!state.getValue(TRIMMED)) {
+            System.out.println(state);
+            original.call(instance, p_46631_, p_46632_, p_46633_, p_46634_, p_46635_, p_46636_, p_46637_);
         }
     }
 }

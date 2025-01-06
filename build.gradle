@@ -81,9 +81,10 @@ dependencies {
     implementation fg.deobf("maven.modrinth:statement:m8DpH9VB")
 
     compileOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
-    compileOnly fg.deobf("maven.modrinth:supplementaries:XmG1PSb2")
-    compileOnly fg.deobf("maven.modrinth:amendments:qE7sokDv")
-    compileOnly fg.deobf("maven.modrinth:moonlight:KY2JXZYq")
+    compileOnly fg.deobf("maven.modrinth:supplementaries:UKTXjffk")
+    compileOnly fg.deobf("maven.modrinth:moonlight:uFOWAGzU")
+    compileOnly fg.deobf("maven.modrinth:amendments:1g60gHDB")
+//    compileOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
 
     compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:wcJNDsEi")
     compileOnly fg.deobf("maven.modrinth:elysium-api:wcq14XyS")
@@ -91,18 +92,24 @@ dependencies {
 
     runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:8oPpOKDw")
     runtimeOnly fg.deobf("maven.modrinth:spelunkery:uPfxW6wx")
-    runtimeOnly fg.deobf("maven.modrinth:supplementaries:XmG1PSb2")
-    runtimeOnly fg.deobf("maven.modrinth:moonlight:KY2JXZYq")
+    runtimeOnly fg.deobf("maven.modrinth:supplementaries:UKTXjffk")
+    runtimeOnly fg.deobf("maven.modrinth:moonlight:uFOWAGzU")
     runtimeOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
     runtimeOnly fg.deobf("maven.modrinth:neapolitan:bSOBBF52")
     runtimeOnly fg.deobf("maven.modrinth:autumnity:dNSKgdoR")
     runtimeOnly fg.deobf("maven.modrinth:farmers-delight:MG1Xuspn")
     runtimeOnly fg.deobf("maven.modrinth:architects-palette:bZg21BDb")
-    runtimeOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
+    runtimeOnly fg.deobf("maven.modrinth:environmental:Oqy4LLPb")
     runtimeOnly fg.deobf("maven.modrinth:caverns-and-chasms:fsal1BlK")
-//    runtimeOnly fg.deobf("maven.modrinth:jadens-nether-expansion:wcJNDsEi")
-    runtimeOnly fg.deobf("maven.modrinth:elysium-api:wcq14XyS")
 
+    runtimeOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
+
+    runtimeOnly fg.deobf("maven.modrinth:amendments:1g60gHDB")
+
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.0"))
+    implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.0")) {
+        jarJar.ranged(it, "[0.4.0,)")
+    }
 
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-common-api:${project.jei}")
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-forge-api:${project.jei}")

@@ -7,8 +7,8 @@
   "mixins": [
     "AbstractCandleBlockMixin",
     "AbstractCandleSkullBlockMixin",
-    "CandleHolderBlockMixin",
     "AbstractSoulCandleBlockMixin",
+    "CandleHolderBlockMixin",
     "SpecialCandleBlockMixin"
   ],
   "client": [

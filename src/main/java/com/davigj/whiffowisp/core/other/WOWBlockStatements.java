@@ -41,19 +41,41 @@ public class WOWBlockStatements {
         if (ModList.get().isLoaded(WOWConstants.BUZZIER_BEES)) {
             // The reason this class is called during the common setup method is because these are run *after* forge has finished registering blocks
             StateRefresher.INSTANCE.addBlockProperty(BBBlocks.SOUL_CANDLE.get(), TRIMMED, false);
+            StateRefresher.INSTANCE.addBlockProperty(BBBlocks.CUPRIC_CANDLE.get(), TRIMMED, false);
         }
         if (ModList.get().isLoaded(WOWConstants.SUPPLEMENTARIES)) {
-            // I think this works? Not without risks, but I'm lazy at the moment
+            // I think this works? Not without risks, but I'm lazy at the moment. Dye Depot compat can waaaait
             StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "candle_holder").get(), TRIMMED, false);
             for (String color : colors) {
                 StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "candle_holder_" + color).get(), TRIMMED, false);
             }
-            StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle").get(), TRIMMED, false);
-            StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_wall").get(), TRIMMED, false);
+        }
+
+//        if (ModList.get().isLoaded(WOWConstants.TF)) {
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.SKELETON_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.SKELETON_WALL_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.CREEPER_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.CREEPER_WALL_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.ZOMBIE_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.ZOMBIE_WALL_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.PIGLIN_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.PIGLIN_WALL_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.PLAYER_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.PLAYER_WALL_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.WITHER_SKELE_SKULL_CANDLE.get(), TRIMMED, false);
+//            StateRefresher.INSTANCE.addBlockProperty(TFBlocks.WITHER_SKELE_WALL_SKULL_CANDLE.get(), TRIMMED, false);
+//        }
+
+        if (ModList.get().isLoaded(WOWConstants.AMENDMENTS)) {
+            StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.AMENDMENTS, "skull_candle").get(), TRIMMED, false);
+            StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.AMENDMENTS, "skull_candle_wall").get(), TRIMMED, false);
             if (ModList.get().isLoaded(WOWConstants.BUZZIER_BEES)) {
-                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "candle_holder_soul").get(), TRIMMED, false);
-                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_soul").get(), TRIMMED, false);
-                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.SUPPLEMENTARIES, "skull_candle_soul_wall").get(), TRIMMED, false);
+                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.AMENDMENTS, "candle_holder_soul").get(), TRIMMED, false);
+                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.AMENDMENTS, "skull_candle_soul").get(), TRIMMED, false);
+                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.AMENDMENTS, "skull_candle_soul_wall").get(), TRIMMED, false);
+//                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.AMENDMENTS, "candle_holder_cupric").get(), TRIMMED, false);
+//                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.AMENDMENTS, "skull_candle_cupric").get(), TRIMMED, false);
+//                StateRefresher.INSTANCE.addBlockProperty(getCompatBlock(WOWConstants.AMENDMENTS, "skull_candle_cupric_wall").get(), TRIMMED, false);
             }
         }
 
