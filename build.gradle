@@ -90,21 +90,12 @@ dependencies {
     compileOnly fg.deobf("maven.modrinth:elysium-api:wcq14XyS")
     compileOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
 
-    runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:8oPpOKDw")
-    runtimeOnly fg.deobf("maven.modrinth:spelunkery:uPfxW6wx")
-    runtimeOnly fg.deobf("maven.modrinth:supplementaries:UKTXjffk")
-    runtimeOnly fg.deobf("maven.modrinth:moonlight:uFOWAGzU")
+//    runtimeOnly fg.deobf("maven.modrinth:supplementaries:UKTXjffk")
+//    runtimeOnly fg.deobf("maven.modrinth:moonlight:uFOWAGzU")
+//    runtimeOnly fg.deobf("maven.modrinth:amendments:1g60gHDB")
+//    runtimeOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
+
     runtimeOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
-    runtimeOnly fg.deobf("maven.modrinth:neapolitan:bSOBBF52")
-    runtimeOnly fg.deobf("maven.modrinth:autumnity:dNSKgdoR")
-    runtimeOnly fg.deobf("maven.modrinth:farmers-delight:MG1Xuspn")
-    runtimeOnly fg.deobf("maven.modrinth:architects-palette:bZg21BDb")
-    runtimeOnly fg.deobf("maven.modrinth:environmental:Oqy4LLPb")
-    runtimeOnly fg.deobf("maven.modrinth:caverns-and-chasms:fsal1BlK")
-
-    runtimeOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
-
-    runtimeOnly fg.deobf("maven.modrinth:amendments:1g60gHDB")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.0"))
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.0")) {
