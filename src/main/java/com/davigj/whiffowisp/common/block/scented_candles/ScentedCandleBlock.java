@@ -121,7 +121,7 @@ public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
             tooltip.add(
                     Component.translatable(
                             "tooltip." + id.getNamespace() + "." + id.getPath()
-                    ).withStyle(ChatFormatting.GRAY)
+                    ).withStyle(ChatFormatting.YELLOW)
             );
         }
     }
