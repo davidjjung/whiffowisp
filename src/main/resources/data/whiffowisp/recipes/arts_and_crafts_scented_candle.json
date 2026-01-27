@@ -1,13 +1,21 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ZWA",
+    "BCD",
+    " N "
+  ],
+  "key": {
+    "Z": {
       "item": "minecraft:candle"
     },
-    {
+    "W": {
       "item": "whiffowisp:netherwax"
     },
-    [
+    "N": {
+      "item": "minecraft:gold_nugget"
+    },
+    "A": [
       {
         "item": "minecraft:red_dye"
       },
@@ -18,7 +26,7 @@
         "item": "minecraft:yellow_dye"
       }
     ],
-    [
+    "B": [
       {
         "item": "minecraft:lime_dye"
       },
@@ -29,7 +37,7 @@
         "item": "minecraft:cyan_dye"
       }
     ],
-    [
+    "C": [
       {
         "item": "minecraft:blue_dye"
       },
@@ -37,7 +45,7 @@
         "item": "minecraft:light_blue_dye"
       }
     ],
-    [
+    "D": [
       {
         "item": "minecraft:purple_dye"
       },
@@ -48,7 +56,7 @@
         "item": "minecraft:magenta_dye"
       }
     ]
-  ],
+  },
   "result": {
     "item": "whiffowisp:arts_and_crafts_scented_candle",
     "count": 2
