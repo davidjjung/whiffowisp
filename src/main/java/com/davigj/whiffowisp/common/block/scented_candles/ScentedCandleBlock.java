@@ -7,9 +7,15 @@ import com.google.common.collect.ImmutableList;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMaps;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -64,7 +70,9 @@ public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
     }
 
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
-        if (!WOWConfig.COMMON.scentFX.get()) {return;}
+        if (!WOWConfig.COMMON.scentFX.get()) {
+            return;
+        }
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
@@ -92,10 +100,29 @@ public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
 
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState state, @NotNull BlockEntityType<T> blockEntity) {
-        return createTickerHelper(blockEntity, (BlockEntityType) WOWBlockEntityTypes.SCENTED_CANDLE.get(), ScentedCandleBlockEntity::tick);    }
+        return createTickerHelper(blockEntity, (BlockEntityType) WOWBlockEntityTypes.SCENTED_CANDLE.get(), ScentedCandleBlockEntity::tick);
+    }
 
     @javax.annotation.Nullable
     protected static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> createTickerHelper(BlockEntityType<A> entityType, BlockEntityType<E> otherEntity, BlockEntityTicker<? super E> ticker) {
         return otherEntity == entityType ? (BlockEntityTicker<A>) ticker : null;
     }
+
+    @Override
+    public void appendHoverText(ItemStack stack,
+                                @Nullable BlockGetter level,
+                                List<Component> tooltip,
+                                TooltipFlag flag) {
+
+        ResourceLocation id = BuiltInRegistries.BLOCK.getKey(this);
+
+        if (id != null) {
+            tooltip.add(
+                    Component.translatable(
+                            "tooltip." + id.getNamespace() + "." + id.getPath()
+                    ).withStyle(ChatFormatting.GRAY)
+            );
+        }
+    }
 }
+
