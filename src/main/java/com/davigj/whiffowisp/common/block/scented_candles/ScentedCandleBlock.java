@@ -12,6 +12,7 @@ import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -123,6 +124,10 @@ public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
                     ).withStyle(ChatFormatting.GRAY)
             );
         }
+    }
+    @Override
+    public String getDescriptionId() {
+        return "block.whiffowisp.scented_candle";
     }
 }
 
