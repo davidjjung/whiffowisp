@@ -84,8 +84,12 @@ dependencies {
     compileOnly fg.deobf("maven.modrinth:supplementaries:UKTXjffk")
     compileOnly fg.deobf("maven.modrinth:moonlight:uFOWAGzU")
     compileOnly fg.deobf("maven.modrinth:amendments:1g60gHDB")
+
     compileOnly fg.deobf("maven.modrinth:autumnity:F0pPtIPH")
     runtimeOnly fg.deobf("maven.modrinth:autumnity:F0pPtIPH")
+    compileOnly fg.deobf("maven.modrinth:caverns-and-chasms:fsal1BlK")
+    runtimeOnly fg.deobf("maven.modrinth:caverns-and-chasms:fsal1BlK")
+
 //    compileOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
 
     compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:wcJNDsEi")
