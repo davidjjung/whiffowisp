@@ -82,7 +82,7 @@ dependencies {
 
     compileOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
     compileOnly fg.deobf("maven.modrinth:supplementaries:UKTXjffk")
-    compileOnly fg.deobf("maven.modrinth:moonlight:uFOWAGzU")
+    runtimeOnly fg.deobf("maven.modrinth:moonlight:lrpPgviq")
     compileOnly fg.deobf("maven.modrinth:amendments:1g60gHDB")
 
     compileOnly fg.deobf("maven.modrinth:autumnity:F0pPtIPH")
@@ -93,10 +93,11 @@ dependencies {
     runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:nWAYgQaF")
     compileOnly fg.deobf("maven.modrinth:environmental:DA9khYQj")
     runtimeOnly fg.deobf("maven.modrinth:environmental:DA9khYQj")
-    compileOnly fg.deobf("maven.modrinth:farmers-delight:8rPF1pFi")
-    runtimeOnly fg.deobf("maven.modrinth:farmers-delight:8rPF1pFi")
     compileOnly fg.deobf("maven.modrinth:spelunkery:jW8j0zdc")
     runtimeOnly fg.deobf("maven.modrinth:spelunkery:jW8j0zdc")
+
+    compileOnly fg.deobf("maven.modrinth:farmers-delight:8rPF1pFi")
+    runtimeOnly fg.deobf("maven.modrinth:farmers-delight:8rPF1pFi")
 //    compileOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
 
     compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:wcJNDsEi")
@@ -104,7 +105,6 @@ dependencies {
     compileOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
 
 //    runtimeOnly fg.deobf("maven.modrinth:supplementaries:UKTXjffk")
-//    runtimeOnly fg.deobf("maven.modrinth:moonlight:uFOWAGzU")
 //    runtimeOnly fg.deobf("maven.modrinth:amendments:1g60gHDB")
 //    runtimeOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
 
