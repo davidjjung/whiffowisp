@@ -1,12 +1,16 @@
 package com.davigj.whiffowisp.common.block.scented_candles;
 
+import com.davigj.whiffowisp.core.WOWConfig;
+import com.davigj.whiffowisp.core.registry.WOWSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,19 +24,21 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
     @Override
     public void affect(Level level, BlockPos pos, BlockState state, Entity entity) {
         super.affect(level, pos, state, entity);
-        if (!(entity instanceof LivingEntity living)) return;
-        if (living instanceof Player player && player.isCrouching()) return;
+        if (entity instanceof Player player && player.isCrouching()) return;
+        if (entity instanceof ItemEntity && !WOWConfig.COMMON.distantSongTeleportsItems.get()) return;
+
+        int d = WOWConfig.COMMON.distantSongTeleportDistance.get();
 
         switch (state.getValue(CANDLES)) {
-            case 1 -> teleport(living, level, pos, 0, -6);
-            case 2 -> teleport(living, level, pos, -6, 0);
-            case 3 -> teleport(living, level, pos, 6, 0);
-            case 4 -> teleport(living, level, pos, 0, 6);
+            case 1 -> teleport(entity, level, pos, 0, -d);
+            case 2 -> teleport(entity, level, pos, -d, 0);
+            case 3 -> teleport(entity, level, pos, 0, d);
+            case 4 -> teleport(entity, level, pos, d, 0);
         }
     }
 
-    public static void teleport(LivingEntity living, Level level, BlockPos candlePos, int xOffset, int zOffset) {
-        BlockPos startPos = living.blockPosition();
+    public static void teleport(Entity entity, Level level, BlockPos candlePos, int xOffset, int zOffset) {
+        BlockPos startPos = entity.blockPosition();
         BlockPos targetPos = findPos(startPos, level, xOffset, zOffset);
         if (targetPos == null) return;
 
@@ -46,74 +52,100 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
             tries++;
         }
 
-        if (tries == 4 || living.isPassenger() || living.isVehicle()) {
-            failTeleport(living, level);
+        if (tries == 4 || entity.isPassenger() || entity.isVehicle()) {
+            if (entity instanceof LivingEntity living) {
+                failTeleport(living, level, candlePos);
+            }
             return;
         }
 
         if (!level.isClientSide) {
-            living.teleportTo(x, y + 0.75D, z);
-            living.resetFallDistance();
+            entity.teleportTo(x, y + 0.75D, z);
 
-            float pitch = 1.3F + living.getRandom().nextFloat();
+            if (entity instanceof ItemEntity item) {
+                item.setDeltaMovement(0.0D, item.getDeltaMovement().y, 0.0D);
+                item.hurtMarked = true;
+            }
 
-            if (living instanceof Player player) {
+            float pitch = 1.0F + level.getRandom().nextFloat();
+            float volume = 0.3F;
+
+            if (entity instanceof Player player) {
+                player.resetFallDistance();
                 player.playNotifySound(
-                        SoundEvents.ENDERMAN_TELEPORT,
+                        WOWSounds.CANDLE_TP.get(),
                         SoundSource.PLAYERS,
-                        0.12F,
+                        volume,
                         pitch
                 );
 
                 level.playSound(
                         player,
                         candlePos,
-                        SoundEvents.ENDERMAN_TELEPORT,
+                        WOWSounds.CANDLE_TP.get(),
                         SoundSource.BLOCKS,
-                        0.12F,
+                        volume,
                         pitch
                 );
             } else {
                 level.playSound(
                         null,
                         candlePos,
-                        SoundEvents.ENDERMAN_TELEPORT,
+                        WOWSounds.CANDLE_TP.get(),
                         SoundSource.BLOCKS,
-                        0.12F,
+                        volume,
                         pitch
                 );
             }
         }
 
-        if (level.isClientSide) {
-            RandomSource random = level.getRandom();
-            for (int i = 0; i < 4; i++) {
-                level.addParticle(
+        if (level instanceof ServerLevel serverLevel) {
+            RandomSource random = serverLevel.getRandom();
+
+            for (int i = 0; i < 6; i++) {
+                serverLevel.sendParticles(
                         ParticleTypes.END_ROD,
-                        living.getX() + random.nextDouble() - 0.5,
-                        living.getY(),
-                        living.getZ() + random.nextDouble() - 0.5,
-                        0.0D, 0.0D, 0.0D
+                        candlePos.getX() + 0.5 + random.nextGaussian() * 0.25,
+                        candlePos.getY() + 0.67,
+                        candlePos.getZ() + 0.5 + random.nextGaussian() * 0.25,
+                        1,
+                        0.0D,
+                        0.02D,
+                        0.0D,
+                        0.0D
                 );
             }
         }
     }
 
-    private static void failTeleport(LivingEntity living, Level level) {
+    private static void failTeleport(LivingEntity living, Level level, BlockPos candlePos) {
         if (living.tickCount % 20 != 0) return;
 
-        if (level.isClientSide) {
-            RandomSource random = level.getRandom();
-            for (int i = 0; i < 5; i++) {
-                level.addParticle(
+        if (level instanceof ServerLevel serverLevel) {
+            RandomSource random = serverLevel.getRandom();
+
+            for (int i = 0; i < 6; i++) {
+                serverLevel.sendParticles(
                         ParticleTypes.SMOKE,
-                        living.getX() + random.nextDouble() - 0.5,
-                        living.getY(),
-                        living.getZ() + random.nextDouble() - 0.5,
-                        0.0D, 0.0D, 0.0D
+                        candlePos.getX() + 0.5 + random.nextGaussian() * 0.3,
+                        candlePos.getY() + 1.0,
+                        candlePos.getZ() + 0.5 + random.nextGaussian() * 0.3,
+                        1,
+                        0.0D,
+                        0.02D,
+                        0.0D,
+                        0.0D
                 );
             }
-            living.playSound(SoundEvents.FIRECHARGE_USE, 0.3F, 4.0F);
+
+            serverLevel.playSound(
+                    null,
+                    candlePos,
+                    SoundEvents.FIRECHARGE_USE,
+                    SoundSource.BLOCKS,
+                    0.3F,
+                    4.0F
+            );
         } else {
             living.hurt(living.damageSources().magic(), 1.0F);
         }

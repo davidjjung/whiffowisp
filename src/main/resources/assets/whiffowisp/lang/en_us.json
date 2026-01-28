@@ -18,5 +18,7 @@
   "tooltip.whiffowisp.tarnation_scented_candle": "Tarnation",
   "tooltip.whiffowisp.daily_special_scented_candle": "Daily Special",
 
-  "item.whiffowisp.netherwax": "Netherwax"
+  "subtitles.whiffowisp.candle_tp": "Scented Candle teleports",
+
+"item.whiffowisp.netherwax": "Netherwax"
 }

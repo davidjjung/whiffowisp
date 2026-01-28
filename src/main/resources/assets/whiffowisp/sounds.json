@@ -1,0 +1,9 @@
+{
+  "candle_tp": {
+    "sounds": [
+      "whiffowisp:candle_tp",
+      "whiffowisp:candle_tp_1"
+    ],
+    "subtitle": "subtitles.whiffowisp.candle_tp"
+  }
+}
