@@ -95,6 +95,8 @@ dependencies {
     runtimeOnly fg.deobf("maven.modrinth:environmental:DA9khYQj")
     compileOnly fg.deobf("maven.modrinth:farmers-delight:8rPF1pFi")
     runtimeOnly fg.deobf("maven.modrinth:farmers-delight:8rPF1pFi")
+    compileOnly fg.deobf("maven.modrinth:spelunkery:jW8j0zdc")
+    runtimeOnly fg.deobf("maven.modrinth:spelunkery:jW8j0zdc")
 //    compileOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
 
     compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:wcJNDsEi")
