@@ -1,5 +1,8 @@
 {
   "block.whiffowisp.scented_candle": "Scented Candle",
+  "block.whiffowisp.netherwax": "Netherwax Block",
+
+  "item.whiffowisp.netherwax": "Netherwax",
 
   "tooltip.whiffowisp.red_redemption_scented_candle": "Red Redemption",
   "tooltip.whiffowisp.caravan_spice_scented_candle": "Caravan Spice",
@@ -17,8 +20,11 @@
   "tooltip.whiffowisp.pink_sands_scented_candle": "Pink Sands",
   "tooltip.whiffowisp.tarnation_scented_candle": "Tarnation",
   "tooltip.whiffowisp.daily_special_scented_candle": "Daily Special",
+  "tooltip.whiffowisp.broken_trust_scented_candle": "Broken Trust",
+  "tooltip.whiffowisp.black_cherry_scented_candle": "Black Cherry",
+  "tooltip.whiffowisp.desert_sunset_scented_candle": "Desert Sunset",
 
-  "subtitles.whiffowisp.candle_tp": "Scented Candle teleports",
+  "tooltip.whiffowisp.dummy_scented_candle": "Dummy translation key for furture candles",
 
-"item.whiffowisp.netherwax": "Netherwax"
+  "subtitles.whiffowisp.candle_tp": "Scented Candle teleports"
 }
