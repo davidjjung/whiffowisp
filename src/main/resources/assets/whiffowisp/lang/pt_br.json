@@ -1,0 +1,30 @@
+{
+  "block.whiffowisp.scented_candle": "Vela Aromática",
+  "block.whiffowisp.netherwax": "Bloco de Cera do Nether",
+
+  "item.whiffowisp.netherwax": "Cera do Nether",
+
+  "tooltip.whiffowisp.red_redemption_scented_candle": "Redenção Vermelha",
+  "tooltip.whiffowisp.caravan_spice_scented_candle": "Especiarias da Caravana",
+  "tooltip.whiffowisp.fireside_spat_scented_candle": "Briga à Beira da Lareira",
+  "tooltip.whiffowisp.seafaring_dream_scented_candle": "Sonho de Navegador",
+  "tooltip.whiffowisp.arts_and_crafts_scented_candle": "Artesanato",
+  "tooltip.whiffowisp.homesick_scented_candle": "Saudades de Casa",
+  "tooltip.whiffowisp.distant_song_scented_candle": "Canção Distante",
+
+  "tooltip.whiffowisp.soft_blanket_scented_candle": "Cobertor Macio",
+  "tooltip.whiffowisp.vanilla_bunny_scented_candle": "Coelhinho Braquinho",
+  "tooltip.whiffowisp.forest_haze_scented_candle": "Floresta Neblinosa",
+  "tooltip.whiffowisp.autumn_wreath_scented_candle": "Guirlanda do Outono",
+  "tooltip.whiffowisp.midsummer_night_scented_candle": "Noite de Verão",
+  "tooltip.whiffowisp.pink_sands_scented_candle": "Areias Rosadas",
+  "tooltip.whiffowisp.tarnation_scented_candle": "Penas Eternas",
+  "tooltip.whiffowisp.daily_special_scented_candle": "Especiarias Diárias",
+  "tooltip.whiffowisp.broken_trust_scented_candle": "Traiçoeira",
+  "tooltip.whiffowisp.black_cherry_scented_candle": "Cereja Preta",
+  "tooltip.whiffowisp.desert_sunset_scented_candle": "Sol no Deserto",
+
+  "tooltip.whiffowisp.dummy_scented_candle": "Dummy translation key for furture candles",
+
+  "subtitles.whiffowisp.candle_tp": "Vela aromática teletransporta"
+}

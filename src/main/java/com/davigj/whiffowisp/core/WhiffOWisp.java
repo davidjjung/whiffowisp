@@ -8,6 +8,7 @@ import com.davigj.whiffowisp.core.data.server.WOWRecipeProvider;
 import com.davigj.whiffowisp.core.registry.WOWBlocks;
 import com.davigj.whiffowisp.core.registry.WOWItems;
 import com.davigj.whiffowisp.core.registry.WOWParticleTypes;
+import com.davigj.whiffowisp.core.registry.WOWSounds;
 import com.teamabnormals.blueprint.common.world.storage.tracking.DataProcessors;
 import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedData;
 import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedDataManager;
@@ -47,6 +48,7 @@ public class WhiffOWisp {
 
 		REGISTRY_HELPER.register(bus);
         WOWParticleTypes.PARTICLE_TYPES.register(bus);
+        WOWSounds.register(bus);
 
         bus.addListener(this::commonSetup);
         bus.addListener(this::clientSetup);
