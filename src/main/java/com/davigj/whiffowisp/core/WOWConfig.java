@@ -12,6 +12,7 @@ public class WOWConfig {
         public final ForgeConfigSpec.ConfigValue<Integer> dailySpecialDuration;
         public final ForgeConfigSpec.ConfigValue<Boolean> distantSongTeleportsItems;
         public final ForgeConfigSpec.ConfigValue<Integer> distantSongTeleportDistance;
+        public final ForgeConfigSpec.ConfigValue<Boolean> blackCherryBoost;
 
         Common (ForgeConfigSpec.Builder builder) {
             builder.push("common");
@@ -20,6 +21,9 @@ public class WOWConfig {
             dailySpecialDuration = builder.comment("Ticks per day for daily scented candles").define("Daily special duration", 24000);
             distantSongTeleportsItems = builder.comment("Can Distant Song Scented Candles teleport items").define("Distant Song teleports items", false);
             distantSongTeleportDistance = builder.comment("Horizontal teleport distance for distant song candles (in blocks)").defineInRange("Distant song teleport distance", 6, 1, 64);
+            builder.push("candles");
+            blackCherryBoost = builder.comment("Do Black Cherry Scented Candles boost nearby darkness cloak wearers").define("Black Cherry darkness boost", true);
+            builder.pop();
             builder.pop();
             builder.push("trades");
             redRedemptionTrade = builder.comment("Do expert butchers trade red redemption candles").define("Red redemption trade", true);

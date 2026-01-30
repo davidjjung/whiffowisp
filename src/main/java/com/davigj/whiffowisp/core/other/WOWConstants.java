@@ -19,6 +19,7 @@ public class WOWConstants {
     public static final String ARCHITECTS_PALETTE = "architects_palette";
     public static final String JNE = "netherexp";
     public static final String TF = "twilightforest";
+    public static final String ALEXSCAVES = "alexscaves";
 
     public static final ResourceLocation WEAKNESS = new ResourceLocation(MINECRAFT, "weakness");
     public static final ResourceLocation SPEED = new ResourceLocation(MINECRAFT, "speed");

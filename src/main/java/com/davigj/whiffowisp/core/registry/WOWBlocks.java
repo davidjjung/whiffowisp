@@ -37,7 +37,7 @@ public class WOWBlocks {
     public static final RegistryObject<Block> TARNATION_SCENTED_CANDLE = HELPER.createBlock("tarnation_scented_candle", () -> new TarnationCandleBlock(Block.Properties.copy(Blocks.BROWN_CANDLE)));
 
     public static final RegistryObject<Block> BROKEN_TRUST_SCENTED_CANDLE = HELPER.createBlock("broken_trust_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.RED_CANDLE), WOWConstants.JNE, WOWConstants.BETRAYED));
-    public static final RegistryObject<Block> BLACK_CHERRY_SCENTED_CANDLE = HELPER.createBlock("black_cherry_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.PINK_CANDLE), WOWConstants.MINECRAFT, WOWConstants.DARKNESS));
+    public static final RegistryObject<Block> BLACK_CHERRY_SCENTED_CANDLE = HELPER.createBlock("black_cherry_scented_candle", () -> new BlackCherryScentedCandleBlock(Block.Properties.copy(Blocks.PINK_CANDLE)));
     public static final RegistryObject<Block> DESERT_SUNSET_SCENTED_CANDLE = HELPER.createBlock("desert_sunset_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.ORANGE_CANDLE), WOWConstants.ATMOSPHERIC, WOWConstants.WORSENING));
 
     public static final RegistryObject<Block> DAILY_SPECIAL_SCENTED_CANDLE = HELPER.createBlock("daily_special_scented_candle", () -> new DailySpecialCandleBlock(Block.Properties.copy(Blocks.PURPLE_CANDLE)));
