@@ -81,34 +81,33 @@ dependencies {
     implementation fg.deobf("maven.modrinth:statement:m8DpH9VB")
 
     compileOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
-    compileOnly fg.deobf("maven.modrinth:supplementaries:UKTXjffk")
-    compileOnly fg.deobf("maven.modrinth:amendments:1g60gHDB")
-
+    compileOnly fg.deobf("maven.modrinth:supplementaries:KgkjZ2z3")
+    compileOnly fg.deobf("maven.modrinth:amendments:73W8UHX3")
     compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:mWogGDsB")
-//    runtimeOnly fg.deobf("maven.modrinth:jadens-nether-expansion:mWogGDsB")
-
     compileOnly fg.deobf("maven.modrinth:elysium-api:SqTYKsC6")
-//    runtimeOnly fg.deobf("maven.modrinth:elysium-api:SqTYKsC6")
-
     compileOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
-//    runtimeOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
 
-//    runtimeOnly fg.deobf("maven.modrinth:autumnity:F0pPtIPH")
-//    runtimeOnly fg.deobf("maven.modrinth:caverns-and-chasms:fsal1BlK")
-//    runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:nWAYgQaF")
-//    runtimeOnly fg.deobf("maven.modrinth:environmental:DA9khYQj")
-//    runtimeOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
-//    runtimeOnly fg.deobf("maven.modrinth:spelunkery:jW8j0zdc")
+    runtimeOnly fg.deobf("maven.modrinth:autumnity:F0pPtIPH")
+    runtimeOnly fg.deobf("maven.modrinth:caverns-and-chasms:fsal1BlK")
+    runtimeOnly fg.deobf("maven.modrinth:upgrade-aquatic:nWAYgQaF")
+    runtimeOnly fg.deobf("maven.modrinth:environmental:DA9khYQj")
+    runtimeOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
+    runtimeOnly fg.deobf("maven.modrinth:atmospheric:B9fN8ZSq")
+    runtimeOnly fg.deobf("maven.modrinth:spelunkery:jW8j0zdc")
+    runtimeOnly fg.deobf("maven.modrinth:alexs-caves:lC8HHXOF")
+    runtimeOnly fg.deobf("maven.modrinth:citadel:lTAAe4sZ")
 
-//    runtimeOnly fg.deobf("maven.modrinth:farmers-delight:8rPF1pFi")
-//    compileOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
+    runtimeOnly fg.deobf("maven.modrinth:farmers-delight:8rPF1pFi")
 
+    runtimeOnly fg.deobf("maven.modrinth:jadens-nether-expansion:mWogGDsB")
+    runtimeOnly fg.deobf("maven.modrinth:elysium-api:SqTYKsC6")
+    runtimeOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
 
-//    runtimeOnly fg.deobf("maven.modrinth:supplementaries:UKTXjffk")
-//    runtimeOnly fg.deobf("maven.modrinth:amendments:1g60gHDB")
-//    runtimeOnly fg.deobf("maven.modrinth:moonlight:lrpPgviq")
+    runtimeOnly fg.deobf("maven.modrinth:supplementaries:KgkjZ2z3")
+    runtimeOnly fg.deobf("maven.modrinth:amendments:73W8UHX3")
+    runtimeOnly fg.deobf("maven.modrinth:moonlight:lrpPgviq")
+
 //    runtimeOnly fg.deobf("curse.maven:the-twilight-forest-227639:5468648")
-
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.0"))
     implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.0")) {

@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "atmospheric"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:candle"
+    },
+    {
+      "item": "whiffowisp:netherwax"
+    },
+    {
+      "item": "atmospheric:barrel_cactus"
+    },
+    {
+      "item": "atmospheric:yucca_flower"
+    }
+  ],
+  "result": {
+    "item": "whiffowisp:desert_sunset_scented_candle",
+    "count": 2
+  }
+}

@@ -14,7 +14,7 @@ public class WOWConfig {
         public final ForgeConfigSpec.ConfigValue<Integer> distantSongTeleportDistance;
 
         Common (ForgeConfigSpec.Builder builder) {
-            builder.push("changes");
+            builder.push("common");
             builder.push("candles");
             scentFX = builder.comment("Do scented candles affect living entities").define("Scent FX", true);
             dailySpecialDuration = builder.comment("Ticks per day for daily scented candles").define("Daily special duration", 24000);

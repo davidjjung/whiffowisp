@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "netherexp"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "netherexp:soul_candle"
+    },
+    {
+      "item": "whiffowisp:netherwax"
+    },
+    {
+      "item": "netherexp:treacherous_flame"
+    },
+    {
+      "item": "netherexp:treacherous_flame"
+    }
+  ],
+  "result": {
+    "item": "whiffowisp:broken_trust_scented_candle",
+    "count": 2
+  }
+}

@@ -110,21 +110,14 @@ public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack,
-                                @Nullable BlockGetter level,
-                                List<Component> tooltip,
-                                TooltipFlag flag) {
-
+    public void appendHoverText(ItemStack stack, @Nullable BlockGetter level, List<Component> tooltip, TooltipFlag flag) {
         ResourceLocation id = BuiltInRegistries.BLOCK.getKey(this);
-
         if (id != null) {
-            tooltip.add(
-                    Component.translatable(
-                            "tooltip." + id.getNamespace() + "." + id.getPath()
-                    ).withStyle(ChatFormatting.YELLOW)
-            );
+            tooltip.add(Component.translatable("tooltip." + id.getNamespace() + "." + id.getPath())
+                            .withStyle(ChatFormatting.YELLOW));
         }
     }
+
     @Override
     public String getDescriptionId() {
         return "block.whiffowisp.scented_candle";

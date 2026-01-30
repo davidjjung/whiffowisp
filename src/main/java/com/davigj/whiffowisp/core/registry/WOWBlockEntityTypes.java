@@ -30,6 +30,9 @@ public class WOWBlockEntityTypes {
                     WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get(),
                     WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get(),
                     WOWBlocks.TARNATION_SCENTED_CANDLE.get(),
+                    WOWBlocks.BROKEN_TRUST_SCENTED_CANDLE.get(),
+                    WOWBlocks.BLACK_CHERRY_SCENTED_CANDLE.get(),
+                    WOWBlocks.DESERT_SUNSET_SCENTED_CANDLE.get(),
                     WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get()
             ));
 }

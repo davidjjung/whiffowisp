@@ -5,7 +5,6 @@ import com.davigj.whiffowisp.core.WhiffOWisp;
 import com.davigj.whiffowisp.core.other.WOWConstants;
 import com.teamabnormals.blueprint.core.util.item.CreativeModeTabContentsPopulator;
 import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
@@ -52,7 +51,9 @@ public class WOWBlocks {
                         HOMESICK_SCENTED_CANDLE, DISTANT_SONG_SCENTED_CANDLE,
                         SOFT_BLANKET_SCENTED_CANDLE, VANILLA_BUNNY_SCENTED_CANDLE, FOREST_HAZE_SCENTED_CANDLE,
                         MIDSUMMER_NIGHT_SCENTED_CANDLE, AUTUMN_WREATH_SCENTED_CANDLE, PINK_SANDS_SCENTED_CANDLE,
-                        TARNATION_SCENTED_CANDLE, DAILY_SPECIAL_SCENTED_CANDLE, BROKEN_TRUST_SCENTED_CANDLE);
+                        TARNATION_SCENTED_CANDLE, DAILY_SPECIAL_SCENTED_CANDLE, BROKEN_TRUST_SCENTED_CANDLE,
+                        BLACK_CHERRY_SCENTED_CANDLE, DESERT_SUNSET_SCENTED_CANDLE
+                );
         CreativeModeTabContentsPopulator.mod(WhiffOWisp.MOD_ID)
                 .tab(CreativeModeTabs.FUNCTIONAL_BLOCKS)
                 .addItemsAfter(of(Items.PINK_CANDLE), RED_REDEMPTION_SCENTED_CANDLE, CARAVAN_SPICE_SCENTED_CANDLE,
@@ -60,7 +61,8 @@ public class WOWBlocks {
                         HOMESICK_SCENTED_CANDLE, DISTANT_SONG_SCENTED_CANDLE,
                         SOFT_BLANKET_SCENTED_CANDLE, VANILLA_BUNNY_SCENTED_CANDLE, FOREST_HAZE_SCENTED_CANDLE,
                         MIDSUMMER_NIGHT_SCENTED_CANDLE, AUTUMN_WREATH_SCENTED_CANDLE, PINK_SANDS_SCENTED_CANDLE,
-                        TARNATION_SCENTED_CANDLE, DAILY_SPECIAL_SCENTED_CANDLE, BROKEN_TRUST_SCENTED_CANDLE);
+                        TARNATION_SCENTED_CANDLE, DAILY_SPECIAL_SCENTED_CANDLE, BROKEN_TRUST_SCENTED_CANDLE,
+                        BLACK_CHERRY_SCENTED_CANDLE, DESERT_SUNSET_SCENTED_CANDLE);
 
     }
 }
