@@ -58,12 +58,12 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
             }
             return;
         }
-
+        int j = 6;
         if (!level.isClientSide) {
             entity.teleportTo(x, y + 0.75D, z);
-
             if (entity instanceof ItemEntity item) {
                 item.setDeltaMovement(0.0D, item.getDeltaMovement().y, 0.0D);
+                j = 2;
                 item.hurtMarked = true;
             }
 
@@ -72,48 +72,19 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
 
             if (entity instanceof Player player) {
                 player.resetFallDistance();
-                player.playNotifySound(
-                        WOWSounds.CANDLE_TP.get(),
-                        SoundSource.PLAYERS,
-                        volume,
-                        pitch
-                );
-
-                level.playSound(
-                        player,
-                        candlePos,
-                        WOWSounds.CANDLE_TP.get(),
-                        SoundSource.BLOCKS,
-                        volume,
-                        pitch
-                );
+                player.playNotifySound(WOWSounds.CANDLE_TP.get(), SoundSource.PLAYERS, volume, pitch);
+                level.playSound(player, candlePos, WOWSounds.CANDLE_TP.get(), SoundSource.BLOCKS, volume, pitch);
             } else {
-                level.playSound(
-                        null,
-                        candlePos,
-                        WOWSounds.CANDLE_TP.get(),
-                        SoundSource.BLOCKS,
-                        volume,
-                        pitch
-                );
+                level.playSound(null, candlePos, WOWSounds.CANDLE_TP.get(), SoundSource.BLOCKS, volume, pitch);
             }
         }
 
         if (level instanceof ServerLevel serverLevel) {
             RandomSource random = serverLevel.getRandom();
-
-            for (int i = 0; i < 6; i++) {
-                serverLevel.sendParticles(
-                        ParticleTypes.END_ROD,
-                        candlePos.getX() + 0.5 + random.nextGaussian() * 0.25,
-                        candlePos.getY() + 0.67,
-                        candlePos.getZ() + 0.5 + random.nextGaussian() * 0.25,
-                        1,
-                        0.0D,
-                        0.02D,
-                        0.0D,
-                        0.0D
-                );
+            for (int i = 0; i < j; i++) {
+                serverLevel.sendParticles(ParticleTypes.END_ROD, candlePos.getX() + 0.5 + random.nextGaussian() * 0.25,
+                        candlePos.getY() + 0.67, candlePos.getZ() + 0.5 + random.nextGaussian() * 0.25, 1,
+                        0.0D, 0.02D, 0.0D, 0.0D);
             }
         }
     }
@@ -125,27 +96,12 @@ public class DistantSongCandleBlock extends ScentedCandleBlock {
             RandomSource random = serverLevel.getRandom();
 
             for (int i = 0; i < 6; i++) {
-                serverLevel.sendParticles(
-                        ParticleTypes.SMOKE,
-                        candlePos.getX() + 0.5 + random.nextGaussian() * 0.3,
-                        candlePos.getY() + 1.0,
-                        candlePos.getZ() + 0.5 + random.nextGaussian() * 0.3,
-                        1,
-                        0.0D,
-                        0.02D,
-                        0.0D,
-                        0.0D
-                );
+                serverLevel.sendParticles(ParticleTypes.SMOKE, candlePos.getX() + 0.5 + random.nextGaussian() * 0.3,
+                        candlePos.getY() + 1.0, candlePos.getZ() + 0.5 + random.nextGaussian() * 0.3,
+                        1, 0.0D, 0.02D, 0.0D, 0.0D);
             }
 
-            serverLevel.playSound(
-                    null,
-                    candlePos,
-                    SoundEvents.FIRECHARGE_USE,
-                    SoundSource.BLOCKS,
-                    0.3F,
-                    4.0F
-            );
+            serverLevel.playSound(null, candlePos, SoundEvents.FIRECHARGE_USE, SoundSource.BLOCKS, 0.3F, 4.0F);
         } else {
             living.hurt(living.damageSources().magic(), 1.0F);
         }
