@@ -1,8 +1,11 @@
-// 1.20.1	2024-11-11T21:49:40.3133734	Item Models: whiffowisp
+// 1.20.1	2026-01-30T18:51:08.7250836	Item Models: whiffowisp
 96d062c6c7c24a7138b4c9350ebcce79cbd744a4 assets/whiffowisp/models/item/arts_and_crafts_scented_candle.json
 971aa347e4c38cb814729115bb6cc777607184b1 assets/whiffowisp/models/item/autumn_wreath_scented_candle.json
+21e078c63a2e6805ae638dcfac4c31edf684cea1 assets/whiffowisp/models/item/black_cherry_scented_candle.json
+398b95a14cc2abee20f08f8cc3cb1b5215b2c419 assets/whiffowisp/models/item/broken_trust_scented_candle.json
 cf66c8e9966c54a89e540422490c196ee10726f2 assets/whiffowisp/models/item/caravan_spice_scented_candle.json
 3b4c886b1fac878809aa5a117ff5ead3f03f9b5a assets/whiffowisp/models/item/daily_special_scented_candle.json
+082856085025c1715f3d12c4acccd4e6f82223cf assets/whiffowisp/models/item/desert_sunset_scented_candle.json
 49109afcb7d786056278c699c7f9ea6175852f64 assets/whiffowisp/models/item/distant_song_scented_candle.json
 e3510fb5eba4e83f1930ba9cf10bc2b2b318d602 assets/whiffowisp/models/item/fireside_spat_scented_candle.json
 a6398a4e340d8481833af34a472f021f048ea9e9 assets/whiffowisp/models/item/forest_haze_scented_candle.json

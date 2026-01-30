@@ -58,6 +58,9 @@ public class WOWLootTableProvider extends LootTableProvider {
             this.add(WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get()));
             this.add(WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get()));
             this.add(WOWBlocks.TARNATION_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.TARNATION_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.BROKEN_TRUST_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.TARNATION_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.BLACK_CHERRY_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.TARNATION_SCENTED_CANDLE.get()));
+            this.add(WOWBlocks.DESERT_SUNSET_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.TARNATION_SCENTED_CANDLE.get()));
             this.add(WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get(), (block) -> createCandleDrops(WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get()));
         }
 

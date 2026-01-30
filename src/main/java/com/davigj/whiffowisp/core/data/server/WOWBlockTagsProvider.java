@@ -33,6 +33,7 @@ public class WOWBlockTagsProvider extends BlockTagsProvider {
                 WOWBlocks.MIDSUMMER_NIGHT_SCENTED_CANDLE.get(),
                 WOWBlocks.TARNATION_SCENTED_CANDLE.get(),
                 WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get(),
+                WOWBlocks.BROKEN_TRUST_SCENTED_CANDLE.get(),
                 WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get()
         );
     }

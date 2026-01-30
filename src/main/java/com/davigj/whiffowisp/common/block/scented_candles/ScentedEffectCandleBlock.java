@@ -35,8 +35,10 @@ public class ScentedEffectCandleBlock extends ScentedCandleBlock{
         super.affect(level, pos, state, entity);
         if (!level.isClientSide) {
             if (ModList.get().isLoaded(modid) && entity instanceof LivingEntity living) {
-                living.addEffect(new MobEffectInstance(new MobEffectInstance(
-                        getCompatEffect(modid, effect).get(), 10 + (20 * state.getValue(CANDLES)), amplifier)));
+                if (getCompatEffect(modid, effect).get() != null) {
+                    living.addEffect(new MobEffectInstance(new MobEffectInstance(
+                            getCompatEffect(modid, effect).get(), 10 + (20 * state.getValue(CANDLES)), amplifier)));
+                }
             }
         }
     }

@@ -28,7 +28,6 @@ public class WOWBlocks {
     public static final RegistryObject<Block> HOMESICK_SCENTED_CANDLE = HELPER.createBlock("homesick_scented_candle", () -> new HomesickCandleBlock(Block.Properties.copy(Blocks.LIGHT_GRAY_CANDLE)));
     public static final RegistryObject<Block> DISTANT_SONG_SCENTED_CANDLE = HELPER.createBlock("distant_song_scented_candle", () -> new DistantSongCandleBlock(Block.Properties.copy(Blocks.MAGENTA_CANDLE)));
 
-
     public static final RegistryObject<Block> SOFT_BLANKET_SCENTED_CANDLE = HELPER.createBlock("soft_blanket_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.WHITE_CANDLE), WOWConstants.MINECRAFT, WOWConstants.WEAKNESS));
     public static final RegistryObject<Block> VANILLA_BUNNY_SCENTED_CANDLE = HELPER.createBlock("vanilla_bunny_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.LIGHT_BLUE_CANDLE), WOWConstants.MINECRAFT, WOWConstants.JUMP_BOOST, 1));
     public static final RegistryObject<Block> MIDSUMMER_NIGHT_SCENTED_CANDLE = HELPER.createBlock("midsummer_night_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.BLACK_CANDLE), WOWConstants.MINECRAFT, WOWConstants.INVISIBILITY));
@@ -37,6 +36,10 @@ public class WOWBlocks {
     public static final RegistryObject<Block> FOREST_HAZE_SCENTED_CANDLE = HELPER.createBlock("forest_haze_scented_candle", () -> new ForestHazeCandleBlock(Block.Properties.copy(Blocks.GREEN_CANDLE)));
     public static final RegistryObject<Block> PINK_SANDS_SCENTED_CANDLE = HELPER.createBlock("pink_sands_scented_candle", () -> new PinkSandsCandleBlock(Block.Properties.copy(Blocks.PINK_CANDLE)));
     public static final RegistryObject<Block> TARNATION_SCENTED_CANDLE = HELPER.createBlock("tarnation_scented_candle", () -> new TarnationCandleBlock(Block.Properties.copy(Blocks.BROWN_CANDLE)));
+
+    public static final RegistryObject<Block> BROKEN_TRUST_SCENTED_CANDLE = HELPER.createBlock("broken_trust_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.RED_CANDLE), WOWConstants.JNE, WOWConstants.BETRAYED));
+    public static final RegistryObject<Block> BLACK_CHERRY_SCENTED_CANDLE = HELPER.createBlock("black_cherry_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.PINK_CANDLE), WOWConstants.MINECRAFT, WOWConstants.DARKNESS));
+    public static final RegistryObject<Block> DESERT_SUNSET_SCENTED_CANDLE = HELPER.createBlock("desert_sunset_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.ORANGE_CANDLE), WOWConstants.ATMOSPHERIC, WOWConstants.WORSENING));
 
     public static final RegistryObject<Block> DAILY_SPECIAL_SCENTED_CANDLE = HELPER.createBlock("daily_special_scented_candle", () -> new DailySpecialCandleBlock(Block.Properties.copy(Blocks.PURPLE_CANDLE)));
 
@@ -49,7 +52,7 @@ public class WOWBlocks {
                         HOMESICK_SCENTED_CANDLE, DISTANT_SONG_SCENTED_CANDLE,
                         SOFT_BLANKET_SCENTED_CANDLE, VANILLA_BUNNY_SCENTED_CANDLE, FOREST_HAZE_SCENTED_CANDLE,
                         MIDSUMMER_NIGHT_SCENTED_CANDLE, AUTUMN_WREATH_SCENTED_CANDLE, PINK_SANDS_SCENTED_CANDLE,
-                        TARNATION_SCENTED_CANDLE, DAILY_SPECIAL_SCENTED_CANDLE);
+                        TARNATION_SCENTED_CANDLE, DAILY_SPECIAL_SCENTED_CANDLE, BROKEN_TRUST_SCENTED_CANDLE);
         CreativeModeTabContentsPopulator.mod(WhiffOWisp.MOD_ID)
                 .tab(CreativeModeTabs.FUNCTIONAL_BLOCKS)
                 .addItemsAfter(of(Items.PINK_CANDLE), RED_REDEMPTION_SCENTED_CANDLE, CARAVAN_SPICE_SCENTED_CANDLE,
@@ -57,7 +60,7 @@ public class WOWBlocks {
                         HOMESICK_SCENTED_CANDLE, DISTANT_SONG_SCENTED_CANDLE,
                         SOFT_BLANKET_SCENTED_CANDLE, VANILLA_BUNNY_SCENTED_CANDLE, FOREST_HAZE_SCENTED_CANDLE,
                         MIDSUMMER_NIGHT_SCENTED_CANDLE, AUTUMN_WREATH_SCENTED_CANDLE, PINK_SANDS_SCENTED_CANDLE,
-                        TARNATION_SCENTED_CANDLE, DAILY_SPECIAL_SCENTED_CANDLE);
+                        TARNATION_SCENTED_CANDLE, DAILY_SPECIAL_SCENTED_CANDLE, BROKEN_TRUST_SCENTED_CANDLE);
 
     }
 }

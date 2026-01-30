@@ -1,6 +1,8 @@
 package com.davigj.whiffowisp.common.block.scented_candles;
 
 import com.davigj.whiffowisp.core.WOWConfig;
+import com.davigj.whiffowisp.core.other.WOWConstants;
+import com.davigj.whiffowisp.core.other.compat.DoomGloomCompat;
 import galena.doom_and_gloom.index.OEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -27,9 +29,9 @@ public class ForestHazeCandleBlock extends ScentedCandleBlock {
             living.addEffect(new MobEffectInstance(new MobEffectInstance(
                     MobEffects.MOVEMENT_SLOWDOWN, 20 * state.getValue(CANDLES))));
 
-            if (ModList.get().isLoaded("doom_and_gloom")) {
+            if (ModList.get().isLoaded(WOWConstants.DOOM_GLOOM)) {
                 living.addEffect(new MobEffectInstance(new MobEffectInstance(
-                        OEffects.FOG.get(), 20 * state.getValue(CANDLES))));
+                        DoomGloomCompat.FOG, 20 * state.getValue(CANDLES))));
             }
         }
     }

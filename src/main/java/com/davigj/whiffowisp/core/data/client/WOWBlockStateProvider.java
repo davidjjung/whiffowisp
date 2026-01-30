@@ -53,6 +53,10 @@ public class WOWBlockStateProvider extends BlockStateProvider {
         this.scentedCandle((ScentedCandleBlock) WOWBlocks.AUTUMN_WREATH_SCENTED_CANDLE.get(), "whiffowisp:block/autumn_wreath_scented_candle");
         this.scentedCandle((ScentedCandleBlock) WOWBlocks.PINK_SANDS_SCENTED_CANDLE.get(), "whiffowisp:block/pink_sands_scented_candle");
         this.scentedCandle((ScentedCandleBlock) WOWBlocks.TARNATION_SCENTED_CANDLE.get(), "whiffowisp:block/tarnation_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.BROKEN_TRUST_SCENTED_CANDLE.get(), "whiffowisp:block/broken_trust_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.BLACK_CHERRY_SCENTED_CANDLE.get(), "whiffowisp:block/black_cherry_scented_candle");
+        this.scentedCandle((ScentedCandleBlock) WOWBlocks.DESERT_SUNSET_SCENTED_CANDLE.get(), "whiffowisp:block/desert_sunset_scented_candle");
+
         this.scentedCandle((ScentedCandleBlock) WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get(), "whiffowisp:block/daily_special_scented_candle");
     }
     private void scentedCandle(ScentedCandleBlock block, String candleName) {

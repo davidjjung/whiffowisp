@@ -1,0 +1,7 @@
+{
+  "parent": "whiffowisp:block/three_scented_candles",
+  "textures": {
+    "all": "whiffowisp:block/desert_sunset_scented_candle",
+    "particle": "whiffowisp:block/desert_sunset_scented_candle"
+  }
+}
