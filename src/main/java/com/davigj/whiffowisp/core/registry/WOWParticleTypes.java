@@ -18,9 +18,11 @@ public class WOWParticleTypes {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, WhiffOWisp.MOD_ID);
 
     public static final RegistryObject<SimpleParticleType> SMALL_NETHER_BRASS_FLAME = PARTICLE_TYPES.register("small_nether_brass_flame", () -> new SimpleParticleType(false));
+    public static final RegistryObject<SimpleParticleType> VOID_EYE_FLAME = PARTICLE_TYPES.register("void_eye_flame", () -> new SimpleParticleType(false));
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(SMALL_NETHER_BRASS_FLAME.get(), FlameParticle.SmallFlameProvider::new);
+        event.registerSpriteSet(VOID_EYE_FLAME.get(), FlameParticle.SmallFlameProvider::new);
     }
 }

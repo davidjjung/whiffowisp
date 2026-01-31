@@ -9,6 +9,7 @@
     "AbstractCandleSkullBlockMixin",
     "AbstractSoulCandleBlockMixin",
     "CandleHolderBlockMixin",
+    "DarknessIncarnateEffectMixin",
     "SpecialCandleBlockMixin"
   ],
   "client": [
