@@ -1,4 +1,4 @@
-// 1.20.1	2026-01-30T19:54:30.3505578	Loot Tables
+// 1.20.1	2026-01-31T08:29:59.5843706	Loot Tables
 5ad72e067b5bb8385a20d905fc23489282962ed5 data/whiffowisp/loot_tables/blocks/arts_and_crafts_scented_candle.json
 db2626c6c13852142643c968e18b6cfaa3dbe8d5 data/whiffowisp/loot_tables/blocks/autumn_wreath_scented_candle.json
 370454c7cb3b45404b4e99427b04d7023875856a data/whiffowisp/loot_tables/blocks/black_cherry_scented_candle.json
@@ -11,6 +11,7 @@ fe13546a183aee9dc56719d412d4c5f6c967e5a5 data/whiffowisp/loot_tables/blocks/fire
 3fdb3554a62270ff65428d18a058a23ebbed00e3 data/whiffowisp/loot_tables/blocks/forest_haze_scented_candle.json
 4c7f23e5ef98e73e6f2ba8e5a1be7eb655110428 data/whiffowisp/loot_tables/blocks/homesick_scented_candle.json
 d7a3b4017a9ca030dbf5839fd3664cb666213f55 data/whiffowisp/loot_tables/blocks/midsummer_night_scented_candle.json
+5f6d7d1b3587c791c28ec06b40604b4a8fc652db data/whiffowisp/loot_tables/blocks/netherwax_block.json
 5335c9465b70b9cace51ba09a2cf4254fefe0fd2 data/whiffowisp/loot_tables/blocks/pink_sands_scented_candle.json
 2573fac0f1c528bfbfb158bdfb67e51690cd704e data/whiffowisp/loot_tables/blocks/red_redemption_scented_candle.json
 fb11f5ba201f1aae8651831476a240b9989adb8a data/whiffowisp/loot_tables/blocks/seafaring_dream_scented_candle.json

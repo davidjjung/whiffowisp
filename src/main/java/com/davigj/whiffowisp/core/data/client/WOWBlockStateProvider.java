@@ -2,38 +2,21 @@ package com.davigj.whiffowisp.core.data.client;
 
 import com.davigj.whiffowisp.common.block.scented_candles.ScentedCandleBlock;
 import com.davigj.whiffowisp.core.WhiffOWisp;
-import com.davigj.whiffowisp.core.other.WOWConstants;
 import com.davigj.whiffowisp.core.registry.WOWBlocks;
-import net.minecraft.data.DataGenerator;
+import com.teamabnormals.blueprint.core.data.client.BlueprintBlockStateProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.AbstractCandleBlock;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CandleBlock;
-import net.minecraft.world.level.block.FenceGateBlock;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 
-public class WOWBlockStateProvider extends BlockStateProvider {
+public class WOWBlockStateProvider extends BlueprintBlockStateProvider {
     public WOWBlockStateProvider(PackOutput output, ExistingFileHelper helper) {
         super(output, WhiffOWisp.MOD_ID, helper);
-    }
-
-    private ResourceLocation key(Block block) {
-        return ForgeRegistries.BLOCKS.getKey(block);
-    }
-
-    private String name(Block block) {
-        return key(block).getPath();
     }
 
     @Override
@@ -58,6 +41,8 @@ public class WOWBlockStateProvider extends BlockStateProvider {
         this.scentedCandle((ScentedCandleBlock) WOWBlocks.DESERT_SUNSET_SCENTED_CANDLE.get(), "whiffowisp:block/desert_sunset_scented_candle");
 
         this.scentedCandle((ScentedCandleBlock) WOWBlocks.DAILY_SPECIAL_SCENTED_CANDLE.get(), "whiffowisp:block/daily_special_scented_candle");
+
+        this.block(WOWBlocks.NETHERWAX_BLOCK.get());
     }
     private void scentedCandle(ScentedCandleBlock block, String candleName) {
         ModelFile smallCandle = models().withExistingParent(name(block), mcLoc("whiffowisp:block/scented_candle"))

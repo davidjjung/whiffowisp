@@ -6,10 +6,13 @@ import com.davigj.whiffowisp.core.registry.WOWItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Supplier;
 
 public class WOWItemModelProvider extends ItemModelProvider {
     public WOWItemModelProvider(PackOutput output, ExistingFileHelper helper) {
@@ -43,4 +46,18 @@ public class WOWItemModelProvider extends ItemModelProvider {
         ResourceLocation itemName = ForgeRegistries.ITEMS.getKey(item.asItem());
         ((ItemModelBuilder)this.withExistingParent(itemName.getPath(), "item/" + "generated")).texture("layer0", new ResourceLocation(this.modid, "item/" + itemName.getPath()));
     }
+
+
+    public ItemModelBuilder block(Supplier<? extends Block> block) {
+        return this.block(block, this.blockName(block));
+    }
+
+    protected String blockName(Supplier<? extends Block> block) {
+        return ForgeRegistries.BLOCKS.getKey((Block)block.get()).getPath();
+    }
+
+    public ItemModelBuilder block(Supplier<? extends Block> block, String name) {
+        return (ItemModelBuilder)this.withExistingParent(this.blockName(block), WhiffOWisp.modLoc("block/" + name));
+    }
+
 }

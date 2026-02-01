@@ -6,6 +6,7 @@ import com.davigj.whiffowisp.core.other.WOWConstants;
 import com.teamabnormals.blueprint.core.util.item.CreativeModeTabContentsPopulator;
 import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -17,6 +18,7 @@ import static net.minecraft.world.item.crafting.Ingredient.of;
 @Mod.EventBusSubscriber(modid = WhiffOWisp.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class WOWBlocks {
     public static final BlockSubRegistryHelper HELPER = WhiffOWisp.REGISTRY_HELPER.getBlockSubHelper();
+    public static final RegistryObject<Block> NETHERWAX_BLOCK = HELPER.createBlock("netherwax_block", () -> new Block(Block.Properties.copy(Blocks.HONEYCOMB_BLOCK).mapColor(DyeColor.RED)));
 
     public static final RegistryObject<Block> RED_REDEMPTION_SCENTED_CANDLE = HELPER.createBlock("red_redemption_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.RED_CANDLE), WOWConstants.MINECRAFT, WOWConstants.RESISTANCE));
     public static final RegistryObject<Block> CARAVAN_SPICE_SCENTED_CANDLE = HELPER.createBlock("caravan_spice_scented_candle", () -> new ScentedEffectCandleBlock(Block.Properties.copy(Blocks.BLUE_CANDLE), WOWConstants.MINECRAFT, WOWConstants.SPEED, 1));
@@ -63,6 +65,9 @@ public class WOWBlocks {
                         MIDSUMMER_NIGHT_SCENTED_CANDLE, AUTUMN_WREATH_SCENTED_CANDLE, PINK_SANDS_SCENTED_CANDLE,
                         TARNATION_SCENTED_CANDLE, DAILY_SPECIAL_SCENTED_CANDLE, BROKEN_TRUST_SCENTED_CANDLE,
                         BLACK_CHERRY_SCENTED_CANDLE, DESERT_SUNSET_SCENTED_CANDLE);
+        CreativeModeTabContentsPopulator.mod(WhiffOWisp.MOD_ID)
+                .tab(CreativeModeTabs.NATURAL_BLOCKS)
+                .addItemsAfter(of(Items.HONEYCOMB_BLOCK), NETHERWAX_BLOCK);
 
     }
 }

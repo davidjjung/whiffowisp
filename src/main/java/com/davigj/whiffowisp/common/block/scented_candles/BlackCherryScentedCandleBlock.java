@@ -21,8 +21,6 @@ import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 import static com.davigj.whiffowisp.core.other.WOWConstants.ALEXSCAVES;
 
 public class BlackCherryScentedCandleBlock extends ScentedCandleBlock {
-    // TODO: Using LIGHT_EMISSION from candle class, define lightlevel() for blockstate using config value
-    // TODO: Find relevant eye particles. Make them animate around candle for funsies
     public BlackCherryScentedCandleBlock(Properties p_152801_) {
         super(p_152801_);
     }

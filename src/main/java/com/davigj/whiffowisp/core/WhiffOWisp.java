@@ -85,4 +85,8 @@ public class WhiffOWisp {
         generator.addProvider(includeClient, new WOWItemModelProvider(output, helper));
         generator.addProvider(includeClient, new WOWBlockStateProvider(output, helper));
     }
+
+    public static ResourceLocation modLoc(String location) {
+        return new ResourceLocation(MOD_ID, location);
+    }
 }
