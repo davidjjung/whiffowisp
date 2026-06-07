@@ -78,7 +78,7 @@ sourceSets.main.resources {
 dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
     implementation fg.deobf("com.teamabnormals:blueprint:${project.minecraft}-${project.blueprint}")
-    implementation fg.deobf("maven.modrinth:statement:m8DpH9VB")
+//    implementation fg.deobf("maven.modrinth:statement:m8DpH9VB")
 
     compileOnly fg.deobf("maven.modrinth:buzzier-bees:PyMRj9VM")
     compileOnly fg.deobf("maven.modrinth:supplementaries:KgkjZ2z3")

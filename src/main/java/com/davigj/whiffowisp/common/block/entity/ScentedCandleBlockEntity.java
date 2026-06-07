@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 
-import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
+import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
 
 public class ScentedCandleBlockEntity extends BlockEntity {
     public ScentedCandleBlockEntity(BlockPos pos, BlockState state) {

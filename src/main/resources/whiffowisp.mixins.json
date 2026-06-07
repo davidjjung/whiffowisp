@@ -5,12 +5,7 @@
   "minVersion": "0.8",
   "refmap": "whiffowisp.refmap.json",
   "mixins": [
-    "AbstractCandleBlockMixin",
-    "AbstractCandleSkullBlockMixin",
-    "AbstractSoulCandleBlockMixin",
-    "CandleHolderBlockMixin",
-    "DarknessIncarnateEffectMixin",
-    "SpecialCandleBlockMixin"
+    "DarknessIncarnateEffectMixin"
   ],
   "client": [
   ],

@@ -12,7 +12,6 @@ import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -36,7 +35,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
+import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
 
 public class ScentedCandleBlock extends CandleBlock implements EntityBlock {
     private static final Int2ObjectMap<List<Vec3>> PARTICLE_OFFSETS = Util.make(() -> {

@@ -3,11 +3,9 @@ package com.davigj.whiffowisp.common.block.scented_candles;
 import com.davigj.whiffowisp.core.WhiffOWisp;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
-import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -19,7 +17,6 @@ import net.minecraft.world.item.FlintAndSteelItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.NetherPortalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -30,7 +27,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
+import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
 
 @Mod.EventBusSubscriber(modid = WhiffOWisp.MOD_ID)
 public class SeafaringDreamCandleBlock extends ScentedCandleBlock {

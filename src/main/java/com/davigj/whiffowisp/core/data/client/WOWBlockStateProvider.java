@@ -12,7 +12,7 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
+import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
 
 public class WOWBlockStateProvider extends BlueprintBlockStateProvider {
     public WOWBlockStateProvider(PackOutput output, ExistingFileHelper helper) {

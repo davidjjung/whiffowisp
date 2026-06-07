@@ -13,7 +13,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.FlintAndSteelItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -26,7 +25,7 @@ import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
+import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
 import static com.davigj.whiffowisp.core.other.WOWConstants.initializeDailySpecials;
 
 @Mod.EventBusSubscriber(modid = WhiffOWisp.MOD_ID)

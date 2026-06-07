@@ -2,7 +2,6 @@ package com.davigj.whiffowisp.core.other.compat;
 
 import com.github.alexmodguy.alexscaves.AlexsCaves;
 import com.github.alexmodguy.alexscaves.client.particle.ACParticleRegistry;
-import com.github.alexmodguy.alexscaves.server.entity.living.UnderzealotEntity;
 import com.github.alexmodguy.alexscaves.server.item.ACItemRegistry;
 import com.github.alexmodguy.alexscaves.server.message.UpdateItemTagMessage;
 import net.minecraft.nbt.CompoundTag;

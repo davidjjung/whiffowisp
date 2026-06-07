@@ -17,8 +17,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.ModList;
 
-import static com.davigj.whiffowisp.core.other.WOWBlockStatements.TRIMMED;
 import static com.davigj.whiffowisp.core.other.WOWConstants.ALEXSCAVES;
+import static com.davigj.whiffowisp.core.other.WOWConstants.TRIMMED;
 
 public class BlackCherryScentedCandleBlock extends ScentedCandleBlock {
     public BlackCherryScentedCandleBlock(Properties p_152801_) {

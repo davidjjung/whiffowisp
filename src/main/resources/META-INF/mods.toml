@@ -39,13 +39,6 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.whiffowisp]]
-modId = "statement"
-mandatory = true
-versionRange = "[4.2.7,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.whiffowisp]]
 modId = "buzzier_bees"
 mandatory = false
 versionRange = "[6.0.0,)"

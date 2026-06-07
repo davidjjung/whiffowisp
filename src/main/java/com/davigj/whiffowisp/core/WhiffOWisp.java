@@ -9,9 +9,6 @@ import com.davigj.whiffowisp.core.registry.WOWBlocks;
 import com.davigj.whiffowisp.core.registry.WOWItems;
 import com.davigj.whiffowisp.core.registry.WOWParticleTypes;
 import com.davigj.whiffowisp.core.registry.WOWSounds;
-import com.teamabnormals.blueprint.common.world.storage.tracking.DataProcessors;
-import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedData;
-import com.teamabnormals.blueprint.common.world.storage.tracking.TrackedDataManager;
 import com.teamabnormals.blueprint.core.util.registry.RegistryHelper;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -31,8 +28,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import java.util.concurrent.CompletableFuture;
-
-import static com.davigj.whiffowisp.core.other.WOWBlockStatements.addTrimStates;
 
 @Mod(WhiffOWisp.MOD_ID)
 public class WhiffOWisp {
@@ -58,7 +53,7 @@ public class WhiffOWisp {
 
     private void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            addTrimStates();
+
         });
     }
 

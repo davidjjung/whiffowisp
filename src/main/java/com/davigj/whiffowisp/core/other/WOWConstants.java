@@ -2,6 +2,8 @@ package com.davigj.whiffowisp.core.other;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.tags.ITagManager;
 
@@ -10,6 +12,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class WOWConstants {
+    public static final BooleanProperty TRIMMED = BooleanProperty.create("trimmed");
+
     public static final String MINECRAFT = "minecraft";
     public static final String ATMOSPHERIC = "atmospheric";
     public static final String DOOM_GLOOM = "doom_and_gloom";
