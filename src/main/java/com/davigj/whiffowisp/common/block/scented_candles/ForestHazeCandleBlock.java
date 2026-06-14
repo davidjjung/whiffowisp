@@ -3,7 +3,6 @@ package com.davigj.whiffowisp.common.block.scented_candles;
 import com.davigj.whiffowisp.core.WOWConfig;
 import com.davigj.whiffowisp.core.other.WOWConstants;
 import com.davigj.whiffowisp.core.other.compat.DoomGloomCompat;
-import galena.doom_and_gloom.index.OEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

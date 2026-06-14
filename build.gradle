@@ -85,7 +85,8 @@ dependencies {
     compileOnly fg.deobf("maven.modrinth:amendments:73W8UHX3")
     compileOnly fg.deobf("maven.modrinth:jadens-nether-expansion:mWogGDsB")
     compileOnly fg.deobf("maven.modrinth:elysium-api:SqTYKsC6")
-    compileOnly fg.deobf("maven.modrinth:doom-gloom:wBhe6O8T")
+    compileOnly fg.deobf("maven.modrinth:doom-gloom:HVbzn6sO")
+    compileOnly fg.deobf("maven.modrinth:moonlight:yvkoc7TA")
     compileOnly fg.deobf("maven.modrinth:alexs-caves:lC8HHXOF")
     compileOnly fg.deobf("maven.modrinth:citadel:lTAAe4sZ")
 

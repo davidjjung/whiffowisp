@@ -22,7 +22,6 @@ public class WOWConstants {
     public static final String BUZZIER_BEES = "buzzier_bees";
     public static final String ARCHITECTS_PALETTE = "architects_palette";
     public static final String JNE = "netherexp";
-    public static final String TF = "twilightforest";
     public static final String ALEXSCAVES = "alexscaves";
 
     public static final ResourceLocation WEAKNESS = new ResourceLocation(MINECRAFT, "weakness");
